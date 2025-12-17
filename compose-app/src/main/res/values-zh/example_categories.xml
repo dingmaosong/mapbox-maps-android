@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="category">类别</string>
     <string name="category_basic">基础</string>
     <string name="category_custom_layer">自定义图层</string>
     <string name="category_styles">样式</string>

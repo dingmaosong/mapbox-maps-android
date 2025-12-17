@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="category">category</string>
+    <string name="category" translatable="false">category</string>
     <string name="category_basic">Basic</string>
     <string name="category_custom_layer">Custom layer</string>
     <string name="category_styles">Styles</string>
