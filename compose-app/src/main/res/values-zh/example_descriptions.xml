@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="description_simple_map">创建并显示使用默认 Mapbox 街道样式的地图。此示例还展示了如何更新地图的起始相机。</string>
+    <string name="description_debug_mode">使用地图的各种调试模式</string>
+    <string name="description_markers">在地图上添加标记</string>
+    <string name="description_circle_annotation">在地图上添加圆形注释</string>
+    <string name="description_point_annotation">在地图上添加点注释</string>
+    <string name="description_point_annotation_cluster">在地图上添加点注释聚类</string>
+    <string name="description_polygon_annotation">在地图上添加多边形注释</string>
+    <string name="description_polyline_annotation">在地图上添加折线注释</string>
+    <string name="description_view_annotation">在地图上添加视图注释</string>
+    <string name="description_dynamic_view_annotation">展示使用动态视图注释</string>
+    <string name="description_map_viewport_animation">使用地图视口动画</string>
+    <string name="description_multiple_display">在_secondary_Display 上显示地图</string>
+    <string name="description_ornaments_customisation">自定义地图的装饰元素</string>
+    <string name="description_location_location_component">在地图上显示位置</string>
+    <string name="description_style_composition">使用样式组合的运行时样式</string>
+    <string name="description_navigation_simulation">使用 compose 模拟导航体验</string>
+    <string name="description_multi_map">展示在同一活动中显示两个地图</string>
+    <string name="description_style_states">展示使用样式状态</string>
+    <string name="description_style_positions">展示使用 slotsContent 和 layerPositionedContent 通过通用样式 API 在基础样式内排列内容。</string>
+    <string name="description_model_layer">展示 3D 模型图层的使用。</string>
+    <string name="description_style_image_source">使用图像源轻松在地图上显示图像。</string>
+    <string name="description_animated_image_source">使用 ImageSource 将栅格图像加载到样式中，并使用 RasterLayer 将其作为动画天气数据在地图上显示。</string>
+    <string name="description_terrain">在栅格_dem 源之上添加地形</string>
+    <string name="description_style_imports">展示样式导入的使用</string>
+    <string name="description_query_rendered_feature">展示查询渲染要素的使用</string>
+    <string name="description_standard_style">展示标准样式的使用</string>
+    <string name="description_clip_layer">展示裁剪图层的使用。</string>
+    <string name="description_interactions">展示交互功能。</string>
+    <string name="description_appearances">使用 Appearances API 和 feature-state 动态更改图标图像</string>
+    <string name="description_custom_vector_icons">使用自定义颜色动态样式化矢量图标，并在点击时交互式地更改其大小</string>
+    <string name="description_precipitations">展示雨雪效果。</string>
+    <string name="description_color_theme">展示颜色主题。</string>
+    <string name="description_elevated_line">展示线条高度</string>
+</resources>

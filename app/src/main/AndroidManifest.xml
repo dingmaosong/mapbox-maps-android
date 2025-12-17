@@ -40,7 +40,7 @@
             android:exported="true"
             android:label="@string/activity_simple_map">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -52,7 +52,7 @@
             android:exported="true"
             android:label="@string/activity_standard_style">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -64,7 +64,7 @@
             android:exported="true"
             android:label="@string/activity_studio_style">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -76,7 +76,7 @@
             android:exported="true"
             android:label="@string/activity_overlay">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -88,7 +88,7 @@
             android:exported="true"
             android:label="@string/activity_localization">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -100,7 +100,7 @@
             android:exported="true"
             android:label="@string/activity_runtime_styling">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -112,7 +112,7 @@
             android:exported="true"
             android:label="@string/activity_tint_fill">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -124,7 +124,7 @@
             android:exported="true"
             android:label="@string/activity_dsl_styling">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -154,7 +154,7 @@
             android:exported="true"
             android:label="@string/activity_heatmap_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_globe" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -166,7 +166,7 @@
             android:exported="true"
             android:label="@string/activity_default_styles">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -178,7 +178,7 @@
             android:exported="true"
             android:label="@string/activity_map_recycle">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_integration" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -190,7 +190,7 @@
             android:exported="true"
             android:label="@string/activity_gestures">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_gestures" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -202,7 +202,7 @@
             android:exported="true"
             android:label="@string/activity_raw_geojson">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -214,7 +214,7 @@
             android:exported="true"
             android:label="@string/activity_raw_expression">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -226,7 +226,7 @@
             android:exported="true"
             android:label="@string/activity_raw_souce_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -238,7 +238,7 @@
             android:exported="true"
             android:label="@string/activity_map_fragment">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_integration" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -250,7 +250,7 @@
             android:exported="true"
             android:label="@string/activity_map_viewpager">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_integration" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -262,7 +262,7 @@
             android:exported="true"
             android:label="@string/activity_map_multi">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_integration" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -274,7 +274,7 @@
             android:exported="true"
             android:label="@string/activity_debug_mode">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -286,7 +286,7 @@
             android:exported="true"
             android:label="@string/activity_mapbox_recorder">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -298,7 +298,7 @@
             android:exported="true"
             android:label="@string/activity_snapshotter">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_snapshot" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -310,7 +310,7 @@
             android:exported="true"
             android:label="@string/activity_snapshotter_dds">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_snapshot" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -322,7 +322,7 @@
             android:exported="true"
             android:label="@string/activity_snapshotter_local">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_snapshot" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -334,7 +334,7 @@
             android:exported="true"
             android:label="@string/activity_fill_extrusion">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_3D" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -346,7 +346,7 @@
             android:exported="true"
             android:label="@string/activity_lights3d">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_3D" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -358,7 +358,7 @@
             android:exported="true"
             android:label="@string/activity_icon_property">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -370,7 +370,7 @@
             android:exported="true"
             android:label="@string/activity_location_tracking">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -382,7 +382,7 @@
             android:exported="true"
             android:label="@string/activity_simulate_navigation_route">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -394,7 +394,7 @@
             android:exported="true"
             android:label="@string/activity_basic_location_pulsing_circle">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -407,7 +407,7 @@
             android:label="@string/activity_simple_geofencing"
             android:launchMode="singleTask">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -420,7 +420,7 @@
             android:label="@string/activity_extended_geofencing"
             android:launchMode="singleTask">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -432,7 +432,7 @@
             android:exported="true"
             android:label="@string/activity_restrict_bounds">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_config" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -444,7 +444,7 @@
             android:exported="true"
             android:label="@string/activity_geojson_in_stack">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -456,7 +456,7 @@
             android:exported="true"
             android:label="@string/activity_animated_image_source">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -468,7 +468,7 @@
             android:exported="true"
             android:label="@string/activity_style_circles_categorically">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -480,7 +480,7 @@
             android:exported="true"
             android:label="@string/activity_space_station_location_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -492,7 +492,7 @@
             android:exported="true"
             android:label="@string/activity_inset_map_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -504,7 +504,7 @@
             android:exported="true"
             android:label="@string/activity_texture_view">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -516,7 +516,7 @@
             android:exported="true"
             android:label="@string/activity_texture_view_animation">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_integration" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -528,7 +528,7 @@
             android:exported="true"
             android:label="@string/activity_dds_gradient_line_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lines_and_polygons" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -540,7 +540,7 @@
             android:exported="true"
             android:label="@string/activity_dds_polygon_holes_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lines_and_polygons" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -552,7 +552,7 @@
             android:exported="true"
             android:label="@string/activity_dds_polygon_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lines_and_polygons" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -564,7 +564,7 @@
             android:exported="true"
             android:label="@string/activity_dds_geojson_line_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lines_and_polygons" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -576,7 +576,7 @@
             android:exported="true"
             android:label="@string/activity_camera_animate_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_globe" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -588,7 +588,7 @@
             android:exported="true"
             android:label="@string/activity_camera_predefined_animators_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_camera" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -600,7 +600,7 @@
             android:exported="true"
             android:label="@string/activity_camera_low_level">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_camera" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -612,7 +612,7 @@
             android:exported="true"
             android:label="@string/activity_camera_animate_during_gesture">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_camera" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -624,7 +624,7 @@
             android:exported="true"
             android:label="@string/activity_dds_multiple_geometries_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -636,7 +636,7 @@
             android:exported="true"
             android:label="@string/activity_within">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -648,7 +648,7 @@
             android:exported="true"
             android:label="@string/activity_distance_style">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -660,7 +660,7 @@
             android:exported="true"
             android:label="@string/activity_vector_tile_source">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -672,7 +672,7 @@
             android:exported="true"
             android:label="@string/activity_wms_source">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -684,7 +684,7 @@
             android:exported="true"
             android:label="@string/activity_lab_moving_icon_with_trailing_line_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lines_and_polygons" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -696,7 +696,7 @@
             android:exported="true"
             android:label="@string/activity_animate_marker_position">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -708,7 +708,7 @@
             android:exported="true"
             android:label="@string/activity_labs_snaking_directions_route_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lines_and_polygons" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -720,7 +720,7 @@
             android:exported="true"
             android:label="@string/activity_styles_show_hide_layers_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -732,7 +732,7 @@
             android:exported="true"
             android:label="@string/activity_styles_dds_geojson_circle_layer_clusters_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -756,7 +756,7 @@
             android:exported="true"
             android:label="@string/activity_basic_add_marker_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -768,7 +768,7 @@
             android:exported="true"
             android:label="@string/activity_basic_add_one_marker_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -780,7 +780,7 @@
             android:exported="true"
             android:label="@string/activity_style_image_source_title">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -792,7 +792,7 @@
             android:exported="true"
             android:label="@string/activity_legacy_offline">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_offline" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -804,7 +804,7 @@
             android:exported="true"
             android:label="@string/activity_custom_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_custom_layer" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -816,7 +816,7 @@
             android:exported="true"
             android:label="@string/activity_sky_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_sky" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -828,7 +828,7 @@
             android:exported="true"
             android:label="@string/activity_sky_snapshotter">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_sky" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -840,7 +840,7 @@
             android:exported="true"
             android:label="@string/activity_native_custom_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_custom_layer" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -852,7 +852,7 @@
             android:exported="true"
             android:label="@string/activity_view_snapshot">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_snapshot" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -864,7 +864,7 @@
             android:exported="true"
             android:label="@string/activity_triangle_custom_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_custom_layer" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -876,7 +876,7 @@
             android:exported="true"
             android:label="@string/activity_globe_custom_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_custom_layer" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -888,7 +888,7 @@
             android:exported="true"
             android:label="@string/activity_transparent_bg">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -900,7 +900,7 @@
             android:exported="true"
             android:label="@string/activity_mapsurface">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_integration" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -927,7 +927,7 @@
             android:exported="true"
             android:label="@string/activity_custom_attribution">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -939,7 +939,7 @@
             android:exported="true"
             android:label="@string/activity_fill">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -951,7 +951,7 @@
             android:exported="true"
             android:label="@string/activity_circle">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -963,7 +963,7 @@
             android:exported="true"
             android:label="@string/activity_symbol">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -975,7 +975,7 @@
             android:exported="true"
             android:label="@string/activity_animate_symbol">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -987,7 +987,7 @@
             android:exported="true"
             android:label="@string/activity_symbol_cluster">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -999,7 +999,7 @@
             android:exported="true"
             android:label="@string/activity_line">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1011,7 +1011,7 @@
             android:exported="true"
             android:label="@string/activity_terrain_showcase">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_3D" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1023,7 +1023,7 @@
             android:exported="true"
             android:label="@string/activity_location_component">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1035,7 +1035,7 @@
             android:exported="true"
             android:label="@string/activity_location_component_animation">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1049,7 +1049,7 @@
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_3D" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1061,7 +1061,7 @@
             android:exported="true"
             android:label="@string/activity_multiple_display">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1080,7 +1080,7 @@
             android:exported="true"
             android:label="@string/activity_map_view_customization">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1092,7 +1092,7 @@
             android:exported="true"
             android:label="@string/activity_offline">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_offline" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1104,7 +1104,7 @@
             android:exported="true"
             android:label="@string/activity_ornaments">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_config" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1116,7 +1116,7 @@
             android:exported="true"
             android:label="@string/activity_scale_bar">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_config" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1128,7 +1128,7 @@
             android:exported="true"
             android:label="@string/activity_large_geojson">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1140,7 +1140,7 @@
             android:exported="true"
             android:label="@string/activity_nine_patch">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1152,7 +1152,7 @@
             android:exported="true"
             android:label="@string/activity_feature_state">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1164,7 +1164,7 @@
             android:exported="true"
             android:label="@string/activity_globe">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_globe" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1176,7 +1176,7 @@
             android:exported="true"
             android:label="@string/activity_spinning_globe">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_globe" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1188,7 +1188,7 @@
             android:exported="true"
             android:label="@string/activity_osm">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1200,7 +1200,7 @@
             android:exported="true"
             android:label="@string/activity_view_annotations">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1212,7 +1212,7 @@
             android:exported="true"
             android:label="@string/activity_view_annotations_basic">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1224,7 +1224,7 @@
             android:exported="true"
             android:label="@string/activity_view_annotations_animation">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1236,7 +1236,7 @@
             android:exported="true"
             android:label="@string/activity_view_annotations_point_annotation">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1248,7 +1248,7 @@
             android:exported="true"
             android:label="@string/activity_dynamic_view_annotations">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1260,7 +1260,7 @@
             android:exported="true"
             android:label="@string/activity_viewport">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_viewport" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1272,7 +1272,7 @@
             android:exported="true"
             android:label="@string/activity_advanced_viewport">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_viewport" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1284,7 +1284,7 @@
             android:exported="true"
             android:label="@string/activity_info_window">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_markers_and_callouts" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1296,7 +1296,7 @@
             android:exported="true"
             android:label="@string/activity_third_party_source">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1315,7 +1315,7 @@
             android:exported="true"
             android:label="@string/activity_secondary_display_presentation">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_lab" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1327,7 +1327,7 @@
             android:exported="true"
             android:label="@string/activity_raster_colorization">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1344,7 +1344,7 @@
             android:exported="true"
             android:label="@string/activity_model_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_3D" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1356,7 +1356,7 @@
             android:exported="true"
             android:label="@string/activity_custom_raster_source">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1368,7 +1368,7 @@
             android:exported="true"
             android:label="@string/actvity_slot_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1380,7 +1380,7 @@
             android:exported="true"
             android:label="@string/activity_raster_particles">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1392,7 +1392,7 @@
             android:exported="true"
             android:label="@string/activity_clip_layer">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1404,7 +1404,7 @@
             android:exported="true"
             android:label="@string/activity_standard_interactions">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1416,7 +1416,7 @@
             android:exported="true"
             android:label="@string/activity_location_component_model_animation">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1428,7 +1428,7 @@
             android:exported="true"
             android:label="@string/activity_precipitation">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1440,7 +1440,7 @@
             android:exported="true"
             android:label="@string/activity_color_theme">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1452,7 +1452,7 @@
             android:label="@string/activity_elevated_line"
             android:exported="true">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_3D" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -1464,7 +1464,7 @@
             android:label="@string/activity_join_data"
             android:exported="true">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_data_visualization" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

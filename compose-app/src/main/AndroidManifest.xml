@@ -29,7 +29,7 @@
             android:label="@string/activity_simple_map"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
         </activity>
         <activity
@@ -40,7 +40,7 @@
             android:label="@string/activity_debug_mode"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
         </activity>
         <activity
@@ -51,7 +51,7 @@
             android:label="@string/activity_markers"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -59,10 +59,10 @@
             android:configChanges="orientation|screenSize|screenLayout"
             android:description="@string/description_circle_annotation"
             android:exported="true"
-            android:label="@string/activity_circle_annotation"
+                android:label="@string/activity_circle_annotation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -73,7 +73,7 @@
             android:label="@string/activity_point_annotation_cluster"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -84,7 +84,7 @@
             android:label="@string/activity_polygon_annotation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -95,7 +95,17 @@
             android:label="@string/activity_polyline_annotation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
+                android:value="@string/category_annotation" />
+        </activity>
+        <activity
+            android:name=".examples.annotation.CustomVectorIconsActivity"
+            android:description="@string/description_custom_vector_icons"
+            android:exported="true"
+            android:label="@string/activity_custom_vector_icons"
+            android:parentActivityName=".ExampleOverviewActivity">
+            <meta-data
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -106,7 +116,7 @@
             android:label="@string/activity_view_annotation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -117,7 +127,7 @@
             android:label="@string/activity_dynamic_view_annotation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -128,7 +138,7 @@
             android:label="@string/activity_map_viewport_animation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_camera" />
         </activity>
         <activity
@@ -139,7 +149,7 @@
             android:label="@string/activity_multiple_display"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
         </activity>
         <activity
@@ -150,7 +160,7 @@
             android:label="@string/activity_ornaments_customisation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_ornaments" />
         </activity>
         <activity
@@ -161,7 +171,7 @@
             android:label="@string/activity_location_location_component"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
         </activity>
         <activity
@@ -171,7 +181,7 @@
             android:label="@string/activity_style_composition"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -182,7 +192,7 @@
             android:label="@string/activity_navigation_simulation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_location" />
         </activity>
         <activity
@@ -193,7 +203,7 @@
             android:label="@string/activity_multi_map"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
         </activity>
         <activity
@@ -203,7 +213,7 @@
             android:label="@string/activity_style_states"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -213,7 +223,7 @@
             android:label="@string/activity_style_positions"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -223,7 +233,7 @@
             android:label="@string/activity_model_layer"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -233,7 +243,7 @@
             android:label="@string/activity_style_image_source_title"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -243,7 +253,7 @@
             android:label="@string/activity_terrain"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -253,7 +263,7 @@
             android:label="@string/activity_animated_image_source"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -263,7 +273,7 @@
             android:label="@string/activity_style_imports"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -273,7 +283,7 @@
             android:label="@string/activity_query_rendered_feature"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_basic" />
         </activity>
         <activity
@@ -283,7 +293,7 @@
             android:label="@string/activity_standard_style"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -294,7 +304,7 @@
             android:label="@string/activity_point_annotation"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_annotation" />
         </activity>
         <activity
@@ -304,7 +314,7 @@
             android:label="@string/activity_clip_layer"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -314,7 +324,17 @@
             android:label="@string/activity_interactions"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
+                android:value="@string/category_styles" />
+        </activity>
+        <activity
+            android:name=".examples.style.AppearancesActivity"
+            android:description="@string/description_appearances"
+            android:exported="true"
+            android:label="@string/activity_appearances"
+            android:parentActivityName=".ExampleOverviewActivity">
+            <meta-data
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -324,7 +344,7 @@
             android:label="@string/activity_precipitations"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -334,7 +354,7 @@
             android:label="@string/activity_color_theme"
             android:parentActivityName=".ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
         <activity
@@ -344,7 +364,7 @@
             android:label="@string/activity_elevated_line"
             android:parentActivityName=".examples.style.ExampleOverviewActivity">
             <meta-data
-                android:name="@string/category"
+                android:name="category"
                 android:value="@string/category_styles" />
         </activity>
     </application>

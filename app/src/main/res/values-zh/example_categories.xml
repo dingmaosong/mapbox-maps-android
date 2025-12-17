@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="category">类别</string>
+    <string name="category_basic">基础</string>
+    <string name="category_custom_layer">自定义图层</string>
+    <string name="category_styles">样式</string>
+    <string name="category_integration">集成</string>
+    <string name="category_gestures">手势</string>
+    <string name="category_snapshot">快照</string>
+    <string name="category_location">位置</string>
+    <string name="category_config">地图配置</string>
+    <string name="category_lab">实验室</string>
+    <string name="category_camera">相机</string>
+    <string name="category_offline">离线</string>
+    <string name="category_sky">天空</string>
+    <string name="category_annotation">注释</string>
+    <string name="category_3D">3D</string>
+    <string name="category_viewport">视口</string>
+    <string name="category_lines_and_polygons">线条和多边形</string>
+    <string name="category_markers_and_callouts">标记和标注</string>
+    <string name="category_data_visualization">数据可视化</string>
+    <string name="category_globe">球形和大气层</string>
+</resources>

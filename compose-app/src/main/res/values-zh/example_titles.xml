@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_simple_map">显示地图视图</string>
+    <string name="activity_debug_mode">调试模式</string>
+    <string name="activity_markers">标记</string>
+    <string name="activity_circle_annotation">圆形注释</string>
+    <string name="activity_point_annotation">点注释</string>
+    <string name="activity_point_annotation_cluster">点注释聚类</string>
+    <string name="activity_polygon_annotation">多边形注释</string>
+    <string name="activity_polyline_annotation">折线注释</string>
+    <string name="activity_view_annotation">视图注释</string>
+    <string name="activity_dynamic_view_annotation">动态视图注释</string>
+    <string name="activity_map_viewport_animation">地图视口动画</string>
+    <string name="activity_multiple_display">多显示器</string>
+    <string name="activity_ornaments_customisation">装饰元素定制</string>
+    <string name="activity_location_location_component">位置组件</string>
+    <string name="activity_style_composition">样式组合</string>
+    <string name="activity_navigation_simulation">模拟导航</string>
+    <string name="activity_multi_map">显示多个地图</string>
+    <string name="activity_style_states">样式状态</string>
+    <string name="activity_style_positions">使用通用样式定位内容</string>
+    <string name="activity_model_layer">在模型图层中显示 3D 模型</string>
+    <string name="activity_style_image_source_title">使用图像源</string>
+    <string name="activity_animated_image_source">添加动画天气数据</string>
+    <string name="activity_terrain">地形</string>
+    <string name="activity_style_imports">样式导入</string>
+    <string name="activity_query_rendered_feature">查询渲染要素</string>
+    <string name="activity_standard_style">标准样式</string>
+    <string name="activity_clip_layer">裁剪图层示例</string>
+    <string name="activity_interactions">交互示例</string>
+    <string name="activity_appearances">外观</string>
+    <string name="activity_custom_vector_icons">自定义矢量图标</string>
+    <string name="activity_precipitations">降水示例</string>
+    <string name="activity_color_theme">颜色主题示例</string>
+    <string name="activity_elevated_line">高架线示例</string>
+</resources>
