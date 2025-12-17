@@ -154,8 +154,8 @@ class CustomTileSourceActivity : AppCompatActivity() {
     val CENTER_GUANGZHOU_WGS84 = listOf(GUANGZHOU_LNG_WGS84, GUANGZHOU_LAT_WGS84)
     
     // Guangzhou GaoPu Road 115 coordinates (GCJ-02/Mars)
-    const val GUANGZHOU_LAT_GCJ02 = 23.126554
-    const val GUANGZHOU_LNG_GCJ02 = 113.352923
+    const val GUANGZHOU_LAT_GCJ02 = 23.175
+    const val GUANGZHOU_LNG_GCJ02 = 113.415
     val CENTER_GUANGZHOU_GCJ02 = listOf(GUANGZHOU_LNG_GCJ02, GUANGZHOU_LAT_GCJ02)
 
     // Gaode Maps (高德地图) - Uses GCJ-02 coordinate system
