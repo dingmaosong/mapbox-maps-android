@@ -139,11 +139,11 @@ class CustomTileSourceActivity : AppCompatActivity() {
     const val TILE_JSON_VERSION = "2.0.0"
     const val TILE_JSON_MIN_ZOOM = 0
     const val TILE_JSON_MAX_ZOOM = 18
-    const val INITIAL_ZOOM = 15.0
+    const val INITIAL_ZOOM = 16.0
 
     // Guangzhou GaoPu Road 115 coordinates
-    const val GUANGZHOU_LAT = 23.1788
-    const val GUANGZHOU_LNG = 113.4101
+    const val GUANGZHOU_LAT = 23.175
+    const val GUANGZHOU_LNG = 113.4147
     val CENTER_GUANGZHOU = listOf(GUANGZHOU_LNG, GUANGZHOU_LAT)
 
     // Gaode Maps (高德地图)
