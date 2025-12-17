@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Mapbox地图SDK测试应用</string>
+    <string name="app_name">MapboxDemo</string>
 
     <!--Default style names-->
     <string name="menu_map_style_streets">街道</string>
