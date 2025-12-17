@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="update_layer_invalidate">更新图层（无效）</string>
+    <string name="red">红色</string>
+    <string name="green">绿色</string>
+    <string name="blue">蓝色</string>
+    <string name="view_annotation_mode_map_sync">地图同步</string>
+    <string name="view_annotation_mode_map_fixed_delay">地图固定延迟</string>
+</resources>
