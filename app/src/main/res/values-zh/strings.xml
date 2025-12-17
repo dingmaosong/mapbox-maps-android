@@ -199,4 +199,8 @@
 
     <!-- Standard style interactions activity -->
     <string name="select_all">全选</string>
+
+    <string name="activity_custom_tile_source">自定义瓦片源</string>
+    <string name="description_custom_tile_source">使用来自高德地图和天地图等中国供应商的自定义瓦片源的示例</string>
+
 </resources>
