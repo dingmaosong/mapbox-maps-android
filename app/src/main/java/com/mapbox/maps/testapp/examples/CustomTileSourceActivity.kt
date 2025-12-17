@@ -68,7 +68,7 @@ class CustomTileSourceActivity : AppCompatActivity() {
           .minZoom(TILE_JSON_MIN_ZOOM)
           .maxZoom(TILE_JSON_MAX_ZOOM)
           .bounds(MERCATOR_BOUNDS)
-          .center(CENTER_GUANGZHOU)
+          .center(CENTER_GUANGZHOU_GCJ02)
           .build()
       }
       TileProvider.TIANDITU -> {
@@ -80,18 +80,12 @@ class CustomTileSourceActivity : AppCompatActivity() {
           .minZoom(TILE_JSON_MIN_ZOOM)
           .maxZoom(TILE_JSON_MAX_ZOOM)
           .bounds(MERCATOR_BOUNDS)
-          .center(CENTER_GUANGZHOU)
+          .center(CENTER_GUANGZHOU_WGS84)
           .build()
       }
     }
 
     mapboxMap = mapView.mapboxMap
-    mapboxMap.setCamera(
-      com.mapbox.maps.CameraOptions.Builder()
-        .center(com.mapbox.geojson.Point.fromLngLat(GUANGZHOU_LNG, GUANGZHOU_LAT))
-        .zoom(INITIAL_ZOOM)
-        .build()
-    )
     mapboxMap.loadStyle(Style.LIGHT) { style ->
       // Remove default sources and layers to ensure we only use our custom source
       style.removeStyleLayer("land")
@@ -103,6 +97,19 @@ class CustomTileSourceActivity : AppCompatActivity() {
         }
       )
       style.addLayer(rasterLayer(LAYER_ID, SOURCE_ID) {})
+      
+      // Set camera position based on the provider after style is loaded
+      val (lat, lng) = when(provider) {
+        TileProvider.GAODE -> Pair(GUANGZHOU_LAT_GCJ02, GUANGZHOU_LNG_GCJ02)
+        TileProvider.TIANDITU -> Pair(GUANGZHOU_LAT_WGS84, GUANGZHOU_LNG_WGS84)
+      }
+      
+      mapboxMap.setCamera(
+        com.mapbox.maps.CameraOptions.Builder()
+          .center(com.mapbox.geojson.Point.fromLngLat(lng, lat))
+          .zoom(INITIAL_ZOOM)
+          .build()
+      )
     }
   }
 
@@ -141,18 +148,23 @@ class CustomTileSourceActivity : AppCompatActivity() {
     const val TILE_JSON_MAX_ZOOM = 18
     const val INITIAL_ZOOM = 16.0
 
-    // Guangzhou GaoPu Road 115 coordinates
-    const val GUANGZHOU_LAT = 23.175
-    const val GUANGZHOU_LNG = 113.4147
-    val CENTER_GUANGZHOU = listOf(GUANGZHOU_LNG, GUANGZHOU_LAT)
+    // Guangzhou GaoPu Road 115 coordinates (WGS84/CGCS2000)
+    const val GUANGZHOU_LAT_WGS84 = 23.1788
+    const val GUANGZHOU_LNG_WGS84 = 113.4101
+    val CENTER_GUANGZHOU_WGS84 = listOf(GUANGZHOU_LNG_WGS84, GUANGZHOU_LAT_WGS84)
+    
+    // Guangzhou GaoPu Road 115 coordinates (GCJ-02/Mars)
+    const val GUANGZHOU_LAT_GCJ02 = 23.126554
+    const val GUANGZHOU_LNG_GCJ02 = 113.352923
+    val CENTER_GUANGZHOU_GCJ02 = listOf(GUANGZHOU_LNG_GCJ02, GUANGZHOU_LAT_GCJ02)
 
-    // Gaode Maps (高德地图)
+    // Gaode Maps (高德地图) - Uses GCJ-02 coordinate system
     const val GAODE_TILE_JSON_NAME = "Gaode Maps"
     const val GAODE_TILE_JSON_DESCRIPTION = "Gaode Maps with road network"
     const val GAODE_TILE_JSON_ATTRIBUTION = "&copy; Gaode Maps contributors"
     const val GAODE_RASTER_TILE_URL = "https://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}"
     
-    // Tianditu (天地图)
+    // Tianditu (天地图) - Uses CGCS2000 coordinate system (similar to WGS84)
     const val TIANDITU_TILE_JSON_NAME = "Tianditu"
     const val TIANDITU_TILE_JSON_DESCRIPTION = "China National Geomatics Center Tianditu"
     const val TIANDITU_TILE_JSON_ATTRIBUTION = "&copy; Tianditu contributors"
