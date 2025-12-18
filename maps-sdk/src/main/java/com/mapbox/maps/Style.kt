@@ -1556,6 +1556,12 @@ class Style internal constructor(
      * Using this constant means your map style will always use the latest version and may change as we improve the style.
      */
     const val TRAFFIC_NIGHT = "mapbox://styles/mapbox/traffic-night-v2"
+
+    /**
+     * Empty: A minimal style with a white background and no additional layers or sources.
+     * Particularly useful for data visualization or when adding custom layers.
+     */
+    const val EMPTY = "asset://styles/empty.json"
   }
 
   /**
