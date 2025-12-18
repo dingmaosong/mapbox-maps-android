@@ -9,11 +9,11 @@
         <domain includeSubdomains="true">events.mapbox.com</domain>
     </domain-config>
     
-<!--    &lt;!&ndash; 允许国内地图服务提供商的明文传输 &ndash;&gt;-->
-<!--    <domain-config cleartextTrafficPermitted="true">-->
-<!--        <domain includeSubdomains="true">tianditu.com</domain>-->
-<!--        <domain includeSubdomains="true">tianditu.gov.cn</domain>-->
-<!--        <domain includeSubdomains="true">is.autonavi.com</domain>-->
-<!--        <domain includeSubdomains="true">webst01.is.autonavi.com</domain>-->
-<!--    </domain-config>-->
+    <!-- 允许国内地图服务提供商的明文传输 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">tianditu.com</domain>
+        <domain includeSubdomains="true">tianditu.gov.cn</domain>
+        <domain includeSubdomains="true">is.autonavi.com</domain>
+        <domain includeSubdomains="true">webst01.is.autonavi.com</domain>
+    </domain-config>
 </network-security-config>
