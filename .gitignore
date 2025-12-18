@@ -13,9 +13,9 @@
 .cxx
 **/build
 /.idea
-app/src/main/res/values/developer-config.xml
+#app/src/main/res/values/developer-config.xml
 app/src/androidTest/java/com/mapbox/maps/testapp/activity
-**/developer-config.xml
+#**/developer-config.xml
 node_modules/
 gh_token.txt
 android-docs-repo
