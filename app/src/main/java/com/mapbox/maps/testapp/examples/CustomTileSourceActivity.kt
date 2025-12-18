@@ -10,15 +10,16 @@ import com.mapbox.common.ValueConverter
 import com.mapbox.maps.MapView
 import com.mapbox.maps.MapboxMap
 import com.mapbox.maps.Style
+import com.mapbox.maps.extension.observable.eventdata.MapLoadingErrorEventData
 import com.mapbox.maps.extension.style.layers.addLayer
 import com.mapbox.maps.extension.style.layers.generated.rasterLayer
 import com.mapbox.maps.extension.style.sources.TileSet
 import com.mapbox.maps.extension.style.sources.addSource
-import com.mapbox.maps.extension.style.sources.generated.RasterSource
 import com.mapbox.maps.extension.style.sources.generated.Scheme
 import com.mapbox.maps.extension.style.sources.generated.rasterSource
-import com.mapbox.maps.extension.style.sources.getSourceAs
+import com.mapbox.maps.logE
 import com.mapbox.maps.logI
+import com.mapbox.maps.plugin.delegates.listeners.OnMapLoadErrorListener
 import com.mapbox.maps.testapp.R
 
 /**
@@ -86,10 +87,19 @@ class CustomTileSourceActivity : AppCompatActivity() {
     }
 
     mapboxMap = mapView.mapboxMap
-    mapboxMap.loadStyle(Style.LIGHT) { style ->
+    // 添加地图加载错误监听器以帮助调试
+    mapboxMap.addOnMapLoadErrorListener(object : OnMapLoadErrorListener {
+      override fun onMapLoadError(eventData: MapLoadingErrorEventData) {
+        logE(TAG, "Map loading error: ${eventData.message}")
+        Toast.makeText(this@CustomTileSourceActivity, "Map loading error: ${eventData.message}", Toast.LENGTH_LONG).show()
+      }
+    })
+
+    // 使用本地空白样式而不是 Mapbox 的在线样式，完全避免访问境外服务器
+    mapboxMap.loadStyle(Style.EMPTY) { style ->
       // Remove default sources and layers to ensure we only use our custom source
       style.removeStyleLayer("land")
-      
+
       style.addSource(
         rasterSource(SOURCE_ID) {
           tileSet(tileSet)
@@ -97,13 +107,13 @@ class CustomTileSourceActivity : AppCompatActivity() {
         }
       )
       style.addLayer(rasterLayer(LAYER_ID, SOURCE_ID) {})
-      
+
       // Set camera position based on the provider after style is loaded
       val (lat, lng) = when(provider) {
         TileProvider.GAODE -> Pair(GUANGZHOU_LAT_GCJ02, GUANGZHOU_LNG_GCJ02)
         TileProvider.TIANDITU -> Pair(GUANGZHOU_LAT_WGS84, GUANGZHOU_LNG_WGS84)
       }
-      
+
       mapboxMap.setCamera(
         com.mapbox.maps.CameraOptions.Builder()
           .center(com.mapbox.geojson.Point.fromLngLat(lng, lat))
@@ -152,7 +162,7 @@ class CustomTileSourceActivity : AppCompatActivity() {
     const val GUANGZHOU_LAT_WGS84 = 23.1788
     const val GUANGZHOU_LNG_WGS84 = 113.4101
     val CENTER_GUANGZHOU_WGS84 = listOf(GUANGZHOU_LNG_WGS84, GUANGZHOU_LAT_WGS84)
-    
+
     // Guangzhou GaoPu Road 115 coordinates (GCJ-02/Mars)
     const val GUANGZHOU_LAT_GCJ02 = 23.175
     const val GUANGZHOU_LNG_GCJ02 = 113.415
@@ -163,12 +173,11 @@ class CustomTileSourceActivity : AppCompatActivity() {
     const val GAODE_TILE_JSON_DESCRIPTION = "Gaode Maps with road network"
     const val GAODE_TILE_JSON_ATTRIBUTION = "&copy; Gaode Maps contributors"
     const val GAODE_RASTER_TILE_URL = "https://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}"
-    
     // Tianditu (天地图) - Uses CGCS2000 coordinate system (similar to WGS84)
     const val TIANDITU_TILE_JSON_NAME = "Tianditu"
     const val TIANDITU_TILE_JSON_DESCRIPTION = "China National Geomatics Center Tianditu"
     const val TIANDITU_TILE_JSON_ATTRIBUTION = "&copy; Tianditu contributors"
-    const val TIANDITU_RASTER_TILE_URL = "http://t4.tianditu.com/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+    const val TIANDITU_RASTER_TILE_URL = "http://t0.tianditu.gov.cn/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=37f0b876e40ce7a0dc91c338f1d6d8d7"
 
     const val RASTER_TILE_SIZE_PIXELS = 256L
 
