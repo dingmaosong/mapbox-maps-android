@@ -1,6 +1,7 @@
 plugins {
   id("com.mapbox.gradle.library")
   id("com.jaredsburrows.license")
+  id("maven-publish")
 }
 
 mapboxLibrary {
@@ -22,13 +23,13 @@ mapboxLibrary {
       reportUndocumented = false
     }
   }
-  publish {
-    group = "com.mapbox.maps"
-    artifactId = "android"
-    artifactTitle = "Mapbox Maps SDK"
-    artifactDescription = artifactTitle
-    sdkName = "mobile-maps-android"
-  }
+//  publish {
+//    group = "com.mapbox.maps"
+//    artifactId = "android"
+//    artifactTitle = "Mapbox Maps SDK"
+//    artifactDescription = "Mapbox Maps SDK"
+//    sdkName = "mobile-maps-android"
+//  }
 }
 
 android {
@@ -129,4 +130,69 @@ project.apply {
   from("$rootDir/gradle/lint.gradle")
   from("$rootDir/gradle/track-public-apis.gradle")
   from("$rootDir/gradle/dependency-updates.gradle")
+}
+
+// 添加额外的发布配置
+afterEvaluate {
+  extensions.configure<PublishingExtension>("publishing") {
+    publications {
+      create<MavenPublication>("maven") {
+        from(components["release"])
+        
+        groupId = "com.mapbox.maps"
+        artifactId = "android-xag"
+        version = "11.17.1-SNAPSHOT2"
+        
+        pom {
+          name.set("Mapbox Maps SDK for Android")
+          description.set("Mapbox Maps SDK for Android")
+          url.set("https://github.com/mapbox/mapbox-maps-android")
+          
+          licenses {
+            license {
+              name.set("Mapbox Terms of Service")
+              url.set("https://www.mapbox.com/legal/tos/")
+              distribution.set("repo")
+            }
+          }
+          
+          developers {
+            developer {
+              id.set("mapbox")
+              name.set("Mapbox")
+            }
+          }
+          
+          scm {
+            connection.set("scm:git@github.com:mapbox/mapbox-maps-android.git")
+            developerConnection.set("scm:git@github.com:mapbox/mapbox-maps-android.git")
+            url.set("https://github.com/mapbox/mapbox-maps-android")
+          }
+        }
+      }
+    }
+    
+    repositories {
+      maven {
+        name = "CNBMavenRepository"
+        // 从 gradle.properties 获取仓库地址
+        url = uri(project.findProperty("cnbArtifactsHciMavenRepoUrl") ?: "")
+        credentials {
+          username = project.findProperty("cnbArtifactsGradleName")?.toString() ?: ""
+          password = project.findProperty("cnbArtifactsGradlePassword")?.toString() ?: ""
+        }
+      }
+    }
+  }
+}
+
+// 创建一个简单的发布任务
+tasks.register("publishToMavenLocalCustom") {
+  group = "publishing"
+  description = "Publishes the Android AAR and sources to Maven local with custom coordinates"
+  
+  doLast {
+    println("This is a placeholder task for custom publishing")
+    println("To publish, use: ./gradlew :maps-sdk:publishReleasePublicationToMavenLocal")
+  }
 }
