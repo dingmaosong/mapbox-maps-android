@@ -192,9 +192,17 @@ afterEvaluate {
 tasks.register("publishToMavenLocalCustom") {
   group = "publishing"
   description = "Publishes the Android AAR and sources to Maven local with custom coordinates"
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 9ea697d6e1 (fix(lib_mapbox：v11.7.1): 构建发布配置)
   doLast {
     println("This is a placeholder task for custom publishing")
     println("To publish, use: ./gradlew :maps-sdk:publishReleasePublicationToMavenLocal")
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9ea697d6e1 (fix(lib_mapbox：v11.7.1): 构建发布配置)
