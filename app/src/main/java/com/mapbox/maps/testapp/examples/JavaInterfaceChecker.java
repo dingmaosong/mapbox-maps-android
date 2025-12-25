@@ -78,7 +78,7 @@ import com.mapbox.maps.interactions.FeatureStateKey;
 import com.mapbox.maps.interactions.TypedFeaturesetDescriptor;
 import com.mapbox.maps.interactions.standard.generated.StandardBuildingsState;
 import com.mapbox.maps.interactions.standard.generated.StandardInteractions;
-import com.mapbox.maps.module.MapTelemetry;
+//import com.mapbox.maps.module.MapTelemetry;
 import com.mapbox.maps.plugin.LocationPuck;
 import com.mapbox.maps.plugin.LocationPuck2D;
 import com.mapbox.maps.plugin.LocationPuck3D;
@@ -91,8 +91,8 @@ import com.mapbox.maps.plugin.annotation.AnnotationConfig;
 import com.mapbox.maps.plugin.annotation.AnnotationPlugin;
 import com.mapbox.maps.plugin.annotation.AnnotationSourceOptions;
 import com.mapbox.maps.plugin.annotation.ClusterOptions;
-import com.mapbox.maps.plugin.attribution.AttributionParserConfig;
-import com.mapbox.maps.plugin.attribution.generated.AttributionSettings;
+//import com.mapbox.maps.plugin.attribution.AttributionParserConfig;
+//import com.mapbox.maps.plugin.attribution.generated.AttributionSettings;
 import com.mapbox.maps.plugin.compass.generated.CompassSettings;
 import com.mapbox.maps.plugin.delegates.listeners.OnMapLoadErrorListener;
 import com.mapbox.maps.plugin.gestures.GesturesPlugin;
@@ -225,19 +225,19 @@ public class JavaInterfaceChecker {
             .build();
   }
 
-  private void attributionSettings() {
-    AttributionSettings attributionSettings = new AttributionSettings.Builder()
-            .setEnabled(true)
-            .setClickable(true)
-            .setMarginBottom(1f)
-            .setMarginLeft(1f)
-            .setIconColor(Color.BLACK)
-            .setMarginRight(1f)
-            .setMarginTop(1f)
-            .setPosition(1)
-            .setEnabled(true)
-            .build();
-  }
+//  private void attributionSettings() {
+//    AttributionSettings attributionSettings = new AttributionSettings.Builder()
+//            .setEnabled(true)
+//            .setClickable(true)
+//            .setMarginBottom(1f)
+//            .setMarginLeft(1f)
+//            .setIconColor(Color.BLACK)
+//            .setMarginRight(1f)
+//            .setMarginTop(1f)
+//            .setPosition(1)
+//            .setEnabled(true)
+//            .build();
+//  }
 
   private void annotationManager(AnnotationPlugin annotationPlugin, MapView mapView, AnnotationConfig annotationConfig) {
     createPolylineAnnotationManager(annotationPlugin, annotationConfig);
@@ -246,13 +246,13 @@ public class JavaInterfaceChecker {
     createCircleAnnotationManager(annotationPlugin, annotationConfig);
   }
 
-  private void attribution() {
-    AttributionParserConfig attributionParserConfig = new AttributionParserConfig();
-    attributionParserConfig = new AttributionParserConfig(true);
-    attributionParserConfig = new AttributionParserConfig(true, true);
-    attributionParserConfig = new AttributionParserConfig(true, true, true);
-    attributionParserConfig = new AttributionParserConfig(true, true, true, true);
-  }
+//  private void attribution() {
+//    AttributionParserConfig attributionParserConfig = new AttributionParserConfig();
+//    attributionParserConfig = new AttributionParserConfig(true);
+//    attributionParserConfig = new AttributionParserConfig(true, true);
+//    attributionParserConfig = new AttributionParserConfig(true, true, true);
+//    attributionParserConfig = new AttributionParserConfig(true, true, true, true);
+//  }
 
   private void annotation(String belowLayerId, String layerId, String sourceId, Value expression, List<Pair<Integer, Integer>> colorLevels, HashMap<String, Object> clusterProperties) {
     ClusterOptions clusterOptions = new ClusterOptions();
@@ -429,7 +429,7 @@ public class JavaInterfaceChecker {
   private void snapshotter(Context context, MapSnapshotOptions options) {
     SnapshotOverlayOptions overlayOptions = new SnapshotOverlayOptions();
     overlayOptions = new SnapshotOverlayOptions(false);
-    overlayOptions = new SnapshotOverlayOptions(false, false);
+    overlayOptions = new SnapshotOverlayOptions(false);
     Snapshotter snapshotter = new Snapshotter(context, options);
     snapshotter = new Snapshotter(context, options, overlayOptions);
   }
@@ -642,27 +642,27 @@ public class JavaInterfaceChecker {
     );
   }
 
-  private static class CustomTelemetry implements MapTelemetry {
-    @Override
-    public void onAppUserTurnstileEvent() {
-
-    }
-
-    @Override
-    public void setUserTelemetryRequestState(boolean enabled) {
-
-    }
-
-    @Override
-    public void disableTelemetrySession() {
-
-    }
-
-    @Override
-    public void onPerformanceEvent(@Nullable Bundle data) {
-
-    }
-  }
+//  private static class CustomTelemetry implements MapTelemetry {
+//    @Override
+//    public void onAppUserTurnstileEvent() {
+//
+//    }
+//
+//    @Override
+//    public void setUserTelemetryRequestState(boolean enabled) {
+//
+//    }
+//
+//    @Override
+//    public void disableTelemetrySession() {
+//
+//    }
+//
+//    @Override
+//    public void onPerformanceEvent(@Nullable Bundle data) {
+//
+//    }
+//  }
 
   @MapboxExperimental
   private void interactions(final MapboxMap mapboxMap) {

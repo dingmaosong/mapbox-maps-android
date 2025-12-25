@@ -207,7 +207,7 @@ internal class MapController : MapPluginProviderDelegate, MapControllable {
     renderer.onStop()
     pluginRegistry.onStop()
     // flush the queued events before destroy to avoid lost telemetry events
-    MapProvider.flushPendingEvents()
+//    MapProvider.flushPendingEvents()
   }
 
   override fun onResume() {

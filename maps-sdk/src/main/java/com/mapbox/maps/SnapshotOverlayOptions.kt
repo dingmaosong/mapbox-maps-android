@@ -9,5 +9,5 @@ package com.mapbox.maps
 
 data class SnapshotOverlayOptions @JvmOverloads constructor(
   val showLogo: Boolean = true,
-  val showAttributes: Boolean = true
+//  val showAttributes: Boolean = true
 )

@@ -6,8 +6,8 @@ import com.mapbox.maps.MapboxExperimental
 import com.mapbox.maps.MapboxMap
 import com.mapbox.maps.MapboxStyleManager
 import com.mapbox.maps.geofencing.MapGeofencingConsent
-import com.mapbox.maps.module.MapTelemetry
-import com.mapbox.maps.plugin.delegates.MapAttributionDelegate
+//import com.mapbox.maps.module.MapTelemetry
+//import com.mapbox.maps.plugin.delegates.MapAttributionDelegate
 import com.mapbox.maps.plugin.delegates.MapCameraManagerDelegate
 import com.mapbox.maps.plugin.delegates.MapDelegateProvider
 import com.mapbox.maps.plugin.delegates.MapFeatureQueryDelegate
@@ -29,10 +29,9 @@ internal class MapDelegateProviderImpl(
   override val mapCameraManagerDelegate: MapCameraManagerDelegate = mapboxMap
   override val mapProjectionDelegate: MapProjectionDelegate = mapboxMap
   override val mapTransformDelegate: MapTransformDelegate = mapboxMap
-  override val mapAttributionDelegate: MapAttributionDelegate by lazy {
+//  override val mapAttributionDelegate: MapAttributionDelegate by lazy {
 //    MapAttributionDelegateImpl(mapboxMap, telemetry, mapGeofencingConsent)
-    MapAttributionDelegateImpl(mapboxMap, mapGeofencingConsent)
-  }
+//  }
   override val mapFeatureQueryDelegate: MapFeatureQueryDelegate = mapboxMap
   override val mapPluginProviderDelegate: MapPluginProviderDelegate = mapController
   override val mapListenerDelegate: MapListenerDelegate = mapboxMap

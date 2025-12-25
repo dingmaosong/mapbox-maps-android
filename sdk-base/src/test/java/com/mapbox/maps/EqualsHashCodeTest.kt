@@ -10,7 +10,7 @@ import com.mapbox.maps.plugin.Plugin
 import com.mapbox.maps.plugin.animation.CameraAnimatorOptions
 import com.mapbox.maps.plugin.animation.MapAnimationOptions
 import com.mapbox.maps.plugin.annotation.ClusterFeature
-import com.mapbox.maps.plugin.attribution.generated.AttributionSettings
+//import com.mapbox.maps.plugin.attribution.generated.AttributionSettings
 import com.mapbox.maps.plugin.compass.generated.CompassSettings
 import com.mapbox.maps.plugin.gestures.generated.GesturesSettings
 import com.mapbox.maps.plugin.locationcomponent.generated.LocationComponentSettings
@@ -102,12 +102,12 @@ class EqualsHashCodeTest {
       .verify()
   }
 
-  @Test
-  fun `AttributionSettings hashCode and equals test`() {
-    EqualsVerifier.forClass(AttributionSettings::class.java)
-      .usingGetClass()
-      .verify()
-  }
+//  @Test
+//  fun `AttributionSettings hashCode and equals test`() {
+//    EqualsVerifier.forClass(AttributionSettings::class.java)
+//      .usingGetClass()
+//      .verify()
+//  }
 
   @Test
   fun `CompassSettings hashCode and equals test`() {
