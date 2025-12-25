@@ -10,7 +10,7 @@ import com.mapbox.maps.plugin.MapPlugin
 import com.mapbox.maps.plugin.MapPluginRegistry
 import com.mapbox.maps.plugin.Plugin
 import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_ANNOTATION_PLUGIN_ID
-import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_ATTRIBUTION_PLUGIN_ID
+//import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_ATTRIBUTION_PLUGIN_ID
 import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_CAMERA_PLUGIN_ID
 import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_COMPASS_PLUGIN_ID
 import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_GESTURES_PLUGIN_ID
@@ -23,7 +23,7 @@ import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_VIEWPORT_PLUGIN_ID
 import com.mapbox.maps.plugin.animation.CameraAnimationsPlugin
 import com.mapbox.maps.plugin.animation.createCameraAnimationPlugin
 import com.mapbox.maps.plugin.annotation.createAnnotationPlugin
-import com.mapbox.maps.plugin.attribution.createAttributionPlugin
+//import com.mapbox.maps.plugin.attribution.createAttributionPlugin
 import com.mapbox.maps.plugin.compass.createCompassPlugin
 import com.mapbox.maps.plugin.delegates.MapPluginProviderDelegate
 import com.mapbox.maps.plugin.gestures.GesturesPlugin
@@ -102,9 +102,9 @@ internal class MapController : MapPluginProviderDelegate, MapControllable {
     this.pluginRegistry = MapProvider.getMapPluginRegistry(
       mapboxMap,
       this,
-      MapProvider.getMapTelemetryInstance(
-        mapInitOptions.context
-      ),
+//      MapProvider.getMapTelemetryInstance(
+//        mapInitOptions.context
+//      ),
       MapProvider.getMapGeofencingConsent(),
     )
     this.cameraChangedCoalescedCallback = CameraChangedCoalescedCallback {
@@ -359,9 +359,9 @@ internal class MapController : MapPluginProviderDelegate, MapControllable {
           MAPBOX_COMPASS_PLUGIN_ID -> {
             createCompassPlugin()
           }
-          MAPBOX_ATTRIBUTION_PLUGIN_ID -> {
-            createAttributionPlugin()
-          }
+//          MAPBOX_ATTRIBUTION_PLUGIN_ID -> {
+//            createAttributionPlugin()
+//          }
           MAPBOX_LIFECYCLE_PLUGIN_ID -> {
             createLifecyclePlugin()
           }

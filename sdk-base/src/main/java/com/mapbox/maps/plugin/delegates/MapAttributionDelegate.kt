@@ -16,7 +16,7 @@ interface MapAttributionDelegate {
    *
    * @return map telemetry instance
    */
-  fun telemetry(): MapTelemetry
+//  fun telemetry(): MapTelemetry
 
   /**
    * Parse attributions with the given config

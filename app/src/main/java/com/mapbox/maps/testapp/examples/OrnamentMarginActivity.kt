@@ -7,7 +7,7 @@ import com.mapbox.android.gestures.RotateGestureDetector
 import com.mapbox.geojson.Point
 import com.mapbox.maps.CameraOptions
 import com.mapbox.maps.MapView
-import com.mapbox.maps.plugin.attribution.attribution
+//import com.mapbox.maps.plugin.attribution.attribution
 import com.mapbox.maps.plugin.compass.compass
 import com.mapbox.maps.plugin.gestures.OnRotateListener
 import com.mapbox.maps.plugin.gestures.addOnRotateListener
@@ -26,7 +26,7 @@ class OrnamentMarginActivity : AppCompatActivity(), OnRotateListener {
     mapView = MapView(this)
     setContentView(mapView)
     with(mapView.mapboxMap) {
-      mapView.attribution.position = Gravity.END or Gravity.BOTTOM
+//      mapView.attribution.position = Gravity.END or Gravity.BOTTOM
       setCamera(
         CameraOptions.Builder()
           .center(Point.fromLngLat(23.760833, 61.498056))
@@ -46,12 +46,12 @@ class OrnamentMarginActivity : AppCompatActivity(), OnRotateListener {
       marginRight = margin
       marginTop = margin
     }
-    with(mapView.attribution) {
-      marginLeft = margin
-      marginBottom = margin
-      marginRight = margin
-      marginTop = margin
-    }
+//    with(mapView.attribution) {
+//      marginLeft = margin
+//      marginBottom = margin
+//      marginRight = margin
+//      marginTop = margin
+//    }
     with(mapView.scalebar) {
       marginLeft = margin
       marginBottom = margin

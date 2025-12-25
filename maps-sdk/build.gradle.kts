@@ -89,21 +89,23 @@ dependencies {
   api(libs.mapbox.base)
 
   implementation(libs.mapbox.annotations)
-  api(project(":sdk-base"))
-  implementation(project(":module-telemetry"))
-  api(project(":extension-style"))
-  api(project(":plugin-logo"))
-  api(project(":plugin-compass"))
-  api(project(":plugin-gestures"))
-  api(project(":plugin-attribution"))
-  api(project(":plugin-locationcomponent"))
-  api(project(":plugin-animation"))
-  api(project(":plugin-scalebar"))
-  api(project(":plugin-overlay"))
-  api(project(":plugin-annotation"))
-  api(project(":extension-localization"))
-  api(project(":plugin-lifecycle"))
-  api(project(":plugin-viewport"))
+  api(project(":sdk-base"))//
+  api(project(":extension-style"))//作用：Style DSL / Style 管理（非常重要）
+  api(project(":extension-localization"))//作用：多语言地图（中英文路名等）     谨慎移除
+
+  api(project(":plugin-gestures"))//作用：缩放 / 拖动 / 旋转
+  api(project(":plugin-overlay"))//作用：自定义 View 覆盖
+  api(project(":plugin-annotation"))//作用：Marker / Polyline / Polygon
+  api(project(":plugin-lifecycle"))//作用：MapView 生命周期管理
+  api(project(":plugin-logo"))//作用：Mapbox Logo                          谨慎移除
+  api(project(":plugin-viewport"))//作用：视口控制（新 API）                 谨慎移除
+  api(project(":plugin-animation"))//作用：Camera / 地图动画                谨慎移除
+
+  api(project(":plugin-compass"))//作用：指南针 UI                        移除
+  api(project(":plugin-locationcomponent"))//作用：定位蓝点                移除
+  api(project(":plugin-scalebar"))//作用：比例尺 UI                         移除
+//  api(project(":plugin-attribution"))//作用：Mapbox 版权角标               移除
+//  implementation(project(":module-telemetry")) 日志上报                     必须移除
   compileOnly(libs.asyncInflater)
   api(libs.kotlin)
   api(libs.coroutines)
@@ -141,7 +143,7 @@ afterEvaluate {
         
         groupId = "com.mapbox.maps"
         artifactId = "android-xag"
-        version = "11.17.1-SNAPSHOT2"
+        version = "11.17.1-SNAPSHOT4"
         
         pom {
           name.set("Mapbox Maps SDK for Android")

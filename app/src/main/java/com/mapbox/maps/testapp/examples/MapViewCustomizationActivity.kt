@@ -18,7 +18,7 @@ import com.mapbox.maps.TileStoreUsageMode
 import com.mapbox.maps.applyDefaultParams
 import com.mapbox.maps.mapsOptions
 import com.mapbox.maps.plugin.Plugin
-import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_ATTRIBUTION_PLUGIN_ID
+//import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_ATTRIBUTION_PLUGIN_ID
 import com.mapbox.maps.plugin.Plugin.Companion.MAPBOX_LOGO_PLUGIN_ID
 import com.mapbox.maps.testapp.databinding.ActivityMapViewCustomizationBinding
 
@@ -74,7 +74,7 @@ class MapViewCustomizationActivity : AppCompatActivity() {
     // plugins configuration
     val plugins = listOf(
       Plugin.Mapbox(MAPBOX_LOGO_PLUGIN_ID),
-      Plugin.Mapbox(MAPBOX_ATTRIBUTION_PLUGIN_ID)
+//      Plugin.Mapbox(MAPBOX_ATTRIBUTION_PLUGIN_ID)
     )
 
     // Set tile store and tile store usage mode so that all MapViews created from now on will apply

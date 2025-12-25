@@ -59,7 +59,7 @@ data class MapInitOptions @JvmOverloads constructor(
       Plugin.Mapbox(Plugin.MAPBOX_GESTURES_PLUGIN_ID),
       Plugin.Mapbox(Plugin.MAPBOX_COMPASS_PLUGIN_ID),
       Plugin.Mapbox(Plugin.MAPBOX_LOGO_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_ATTRIBUTION_PLUGIN_ID),
+//      Plugin.Mapbox(Plugin.MAPBOX_ATTRIBUTION_PLUGIN_ID),
       Plugin.Mapbox(Plugin.MAPBOX_LOCATION_COMPONENT_PLUGIN_ID),
       Plugin.Mapbox(Plugin.MAPBOX_SCALEBAR_PLUGIN_ID),
       Plugin.Mapbox(Plugin.MAPBOX_ANNOTATION_PLUGIN_ID),
