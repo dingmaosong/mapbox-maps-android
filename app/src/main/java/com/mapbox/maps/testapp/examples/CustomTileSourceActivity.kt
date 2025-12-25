@@ -95,9 +95,10 @@ class CustomTileSourceActivity : AppCompatActivity() {
       }
     })
 
-    // 使用本地空白样式而不是 Mapbox 的在线样式，完全避免访问境外服务器
-    mapboxMap.loadStyle(Style.EMPTY) { style ->
+    // 使用本地离线样式而不是 Mapbox 的在线样式，完全避免访问境外服务器
+    mapboxMap.loadStyle(Style.OFFLINE) { style ->
       // Remove default sources and layers to ensure we only use our custom source
+      // ------- 验证test.json 需要注释掉这段代码 并修改 Style.OFFLINE
       style.removeStyleLayer("land")
 
       style.addSource(
@@ -120,6 +121,7 @@ class CustomTileSourceActivity : AppCompatActivity() {
           .zoom(INITIAL_ZOOM)
           .build()
       )
+      // ------- 验证test.json 需要注释掉这段代码
     }
   }
 

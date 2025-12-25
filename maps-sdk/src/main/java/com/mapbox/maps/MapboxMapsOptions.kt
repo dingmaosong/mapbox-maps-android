@@ -61,6 +61,17 @@ object MapboxMapsOptions {
   var tileStore: TileStore?
     get() = MapsResourceOptions.getTileStore()
     set(value) = MapsResourceOptions.setTileStore(value)
+
+  /**
+   * The path to the Mapbox Maps asset folder.
+   *
+   * The engine will use this folder for storing offline style packages and temporary data.
+   *
+   * The application must have sufficient permissions to create files within the provided directory.
+   */
+  var assetPath: String
+    get() = MapsResourceOptions.getAssetPath()
+    set(value) = MapsResourceOptions.setAssetPath(value)
 }
 
 /**

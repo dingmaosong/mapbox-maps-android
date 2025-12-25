@@ -1535,7 +1535,7 @@ class Style internal constructor(
      * Empty: A minimal style with a white background and no additional layers or sources.
      * Particularly useful for data visualization or when adding custom layers.
      */
-    const val EMPTY = "asset://styles/empty.json"
+    const val OFFLINE = "asset://styles/offline.json"
   }
 
   /**
