@@ -19,12 +19,12 @@ import com.mapbox.maps.MapView
 import com.mapbox.maps.MapboxMap
 import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
 import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportState
-import com.mapbox.maps.extension.compose.internal.ComposeTelemetryEvents
+//import com.mapbox.maps.extension.compose.internal.ComposeTelemetryEvents
 import com.mapbox.maps.extension.compose.internal.MapApplier
 import com.mapbox.maps.extension.compose.internal.MapPreviewPlaceHolder
 import com.mapbox.maps.extension.compose.internal.MapViewLifecycle
 import com.mapbox.maps.extension.compose.internal.MapboxMapComposeNode
-import com.mapbox.maps.extension.compose.ornaments.attribution.MapAttributionScope
+//import com.mapbox.maps.extension.compose.ornaments.attribution.MapAttributionScope
 import com.mapbox.maps.extension.compose.ornaments.compass.MapCompassScope
 import com.mapbox.maps.extension.compose.ornaments.logo.MapLogoScope
 import com.mapbox.maps.extension.compose.ornaments.scalebar.MapScaleBarScope
@@ -42,7 +42,7 @@ import kotlinx.coroutines.awaitCancellation
  * @param compass The Mapbox Compass ornament of the map, consider using [MapCompassScope.Compass].
  * @param scaleBar The Mapbox ScaleBar ornament of the map, consider using [MapScaleBarScope.ScaleBar].
  * @param logo The Mapbox Logo ornament of the map, consider using [MapLogoScope.Logo].
- * @param attribution The Mapbox Attribution ornament of the map, consider using [MapAttributionScope.Attribution].
+// * @param attribution The Mapbox Attribution ornament of the map, consider using [MapAttributionScope.Attribution].
  * @param mapViewportState A state object that can be hoisted to control and observe the map's camera state. A [MapViewportState] may only be used by a single [MapboxMap] composable at a time as it reflects instance state for a single view of a map.
  * @param mapState A state object that can be hoisted to query map rendered features and gestures settings.
  * @param onMapClickListener Callback to be invoked when the user clicks on the map view.
@@ -61,7 +61,7 @@ public fun MapboxMap(
   compass: (@Composable MapCompassScope.() -> Unit) = { Compass() },
   scaleBar: (@Composable MapScaleBarScope.() -> Unit) = { ScaleBar() },
   logo: (@Composable MapLogoScope.() -> Unit) = { Logo() },
-  attribution: (@Composable MapAttributionScope.() -> Unit) = { Attribution() },
+//  attribution: (@Composable MapAttributionScope.() -> Unit) = { Attribution() },
   mapViewportState: MapViewportState = rememberMapViewportState(),
   mapState: MapState = rememberMapState(),
   onMapClickListener: OnMapClickListener? = null,
@@ -79,7 +79,7 @@ public fun MapboxMap(
   key(composeMapInitOptions) {
     val context = LocalContext.current
     val mapView = remember {
-      ComposeTelemetryEvents.map.increment()
+//      ComposeTelemetryEvents.map.increment()
       MapView(
         context,
         mapInitOptions = composeMapInitOptions.getMapInitOptions(context)
@@ -95,7 +95,7 @@ public fun MapboxMap(
       MapCompassScope(mapView, this).compass()
       MapScaleBarScope(mapView, this).scaleBar()
       MapLogoScope(this).logo()
-      MapAttributionScope(mapView, this).attribution()
+//      MapAttributionScope(mapView, this).attribution()
     }
 
     key(mapViewportState) {

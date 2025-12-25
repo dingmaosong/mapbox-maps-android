@@ -21,7 +21,7 @@ import com.mapbox.maps.extension.style.precipitations.generated.Snow
 import com.mapbox.maps.extension.style.projection.generated.Projection
 import com.mapbox.maps.extension.style.sources.Source
 import com.mapbox.maps.extension.style.terrain.generated.Terrain
-import com.mapbox.maps.extension.style.utils.StyleTelemetryEvents
+//import com.mapbox.maps.extension.style.utils.StyleTelemetryEvents
 
 /**
  * The concrete implementation of style extension.
@@ -313,7 +313,7 @@ class StyleExtensionImpl private constructor(
      * @return an [StyleContract.StyleExtension] instance.
      */
     fun build(): StyleContract.StyleExtension {
-      StyleTelemetryEvents.dsl.increment()
+//      StyleTelemetryEvents.dsl.increment()
       return StyleExtensionImpl(this)
     }
   }

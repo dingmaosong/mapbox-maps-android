@@ -28,7 +28,7 @@ interface MapDelegateProvider {
   /**
    * Delegate used to interact with map's attribution.
    */
-  val mapAttributionDelegate: MapAttributionDelegate
+//  val mapAttributionDelegate: MapAttributionDelegate
 
   /**
    * Delegate used to interact with map's style.

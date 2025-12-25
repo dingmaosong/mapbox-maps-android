@@ -15,11 +15,11 @@ import com.mapbox.common.MapboxOptions
 import com.mapbox.common.module.provider.MapboxModuleProvider
 import com.mapbox.common.module.provider.ModuleProviderArgument
 import com.mapbox.geojson.Point
-import com.mapbox.maps.attribution.AttributionLayout
-import com.mapbox.maps.attribution.AttributionMeasure
-import com.mapbox.maps.attribution.AttributionParser
+//import com.mapbox.maps.attribution.AttributionLayout
+//import com.mapbox.maps.attribution.AttributionMeasure
+//import com.mapbox.maps.attribution.AttributionParser
 import com.mapbox.maps.dsl.cameraOptions
-import com.mapbox.maps.module.MapTelemetry
+//import com.mapbox.maps.module.MapTelemetry
 import java.lang.ref.WeakReference
 import kotlin.math.min
 
@@ -59,7 +59,7 @@ open class Snapshotter {
     snapshotOverlayOptions = overlayOptions
     pixelRatio = context.resources.displayMetrics.density
     coreSnapshotter = MapSnapshotter(options)
-    dispatchTelemetryTurnstileEvent(context)
+//    dispatchTelemetryTurnstileEvent(context)
     val weakSelf = WeakReference(this)
     loadingErrorCancelable = subscribeMapLoadingError {
       weakSelf.get()?.apply {
@@ -107,18 +107,18 @@ open class Snapshotter {
     )
   }
 
-  private fun dispatchTelemetryTurnstileEvent(
-    context: Context
-  ) {
-    MapboxModuleProvider.createModule<MapTelemetry>(MapboxModuleType.MapTelemetry) {
-      arrayOf(
-        ModuleProviderArgument(
-          Context::class.java,
-          context.applicationContext
-        ),
-      )
-    }.onAppUserTurnstileEvent()
-  }
+//  private fun dispatchTelemetryTurnstileEvent(
+//    context: Context
+//  ) {
+//    MapboxModuleProvider.createModule<MapTelemetry>(MapboxModuleType.MapTelemetry) {
+//      arrayOf(
+//        ModuleProviderArgument(
+//          Context::class.java,
+//          context.applicationContext
+//        ),
+//      )
+//    }.onAppUserTurnstileEvent()
+//  }
 
   private constructor(
     context: WeakReference<Context>,
@@ -189,7 +189,7 @@ open class Snapshotter {
           // do the user drawing if needed
           overlayCallback?.onSnapshotOverlay(snapshotOverlay)
           // draw Mapbox attribution on top of user drawing
-          addOverlay(snapshotBitmap, snapshotOverlay)
+//          addOverlay(snapshotBitmap, snapshotOverlay)
           resultCallback.onSnapshotResult(
             snapshot = snapshotBitmap,
             errorMessage = null,
@@ -365,75 +365,75 @@ open class Snapshotter {
     return requireCoreSnapshotter().subscribe(styleImageMissingCallback)
   }
 
-  private fun drawAttribution(
-    overlay: SnapshotOverlay,
-    measure: AttributionMeasure,
-    layout: AttributionLayout
-  ) {
-    // draw attribution
-    val anchorPoint = layout.anchorPoint
-    if (anchorPoint != null) {
-      drawAttribution(overlay.canvas, measure, anchorPoint)
-    } else {
-      logE(
-        TAG,
-        "Could not generate attribution for snapshot size: ${overlay.canvas.width}x${overlay.canvas.height}." + " You are required to provide your own attribution for the used sources: ${overlay.attributions}"
-      )
-    }
-  }
+//  private fun drawAttribution(
+//    overlay: SnapshotOverlay,
+//    measure: AttributionMeasure,
+//    layout: AttributionLayout
+//  ) {
+//    // draw attribution
+//    val anchorPoint = layout.anchorPoint
+//    if (anchorPoint != null) {
+//      drawAttribution(overlay.canvas, measure, anchorPoint)
+//    } else {
+//      logE(
+//        TAG,
+//        "Could not generate attribution for snapshot size: ${overlay.canvas.width}x${overlay.canvas.height}." + " You are required to provide your own attribution for the used sources: ${overlay.attributions}"
+//      )
+//    }
+//  }
 
-  private fun drawAttribution(canvas: Canvas, measure: AttributionMeasure, anchorPoint: PointF) {
-    canvas.save()
-    canvas.translate(anchorPoint.x, anchorPoint.y)
-    measure.getTextView().draw(canvas)
-    canvas.restore()
-  }
+//  private fun drawAttribution(canvas: Canvas, measure: AttributionMeasure, anchorPoint: PointF) {
+//    canvas.save()
+//    canvas.translate(anchorPoint.x, anchorPoint.y)
+//    measure.getTextView().draw(canvas)
+//    canvas.restore()
+//  }
 
-  private fun addOverlay(
-    snapshotBitmap: Bitmap,
-    overlay: SnapshotOverlay
-  ) {
-    context.get()?.apply {
-      val margin: Int = this.resources.displayMetrics.density.toInt() * 4
-      drawOverlay(snapshotBitmap, overlay, margin)
-    }
-  }
+//  private fun addOverlay(
+//    snapshotBitmap: Bitmap,
+//    overlay: SnapshotOverlay
+//  ) {
+//    context.get()?.apply {
+//      val margin: Int = this.resources.displayMetrics.density.toInt() * 4
+//      drawOverlay(snapshotBitmap, overlay, margin)
+//    }
+//  }
 
-  private fun drawOverlay(
-    snapshotBitmap: Bitmap,
-    overlay: SnapshotOverlay,
-    margin: Int
-  ) {
-    context.get()?.let {
-      val measure: AttributionMeasure = getAttributionMeasure(it, overlay, snapshotBitmap, margin)
-      val layout = measure.measure()
-      layout?.let {
-        if (snapshotOverlayOptions.showLogo) {
-          drawLogo(snapshotBitmap, overlay.canvas, margin, layout)
-        }
-        if (snapshotOverlayOptions.showAttributes) {
-          drawAttribution(overlay, measure, layout)
-        }
-      }
-    }
-  }
+//  private fun drawOverlay(
+//    snapshotBitmap: Bitmap,
+//    overlay: SnapshotOverlay,
+//    margin: Int
+//  ) {
+//    context.get()?.let {
+//      val measure: AttributionMeasure = getAttributionMeasure(it, overlay, snapshotBitmap, margin)
+//      val layout = measure.measure()
+//      layout?.let {
+//        if (snapshotOverlayOptions.showLogo) {
+//          drawLogo(snapshotBitmap, overlay.canvas, margin, layout)
+//        }
+//        if (snapshotOverlayOptions.showAttributes) {
+//          drawAttribution(overlay, measure, layout)
+//        }
+//      }
+//    }
+//  }
 
-  private fun getAttributionMeasure(
-    context: Context,
-    overlay: SnapshotOverlay,
-    snapshotBitmap: Bitmap,
-    margin: Int
-  ): AttributionMeasure {
-    val logo: Logo = createScaledLogo(context, snapshotBitmap)
-    return AttributionMeasure(
-      snapshot = snapshotBitmap,
-      logo = logo.large,
-      logoSmall = logo.small,
-      textView = createTextView(context, overlay, false, logo.scale),
-      textViewShort = createTextView(context, overlay, true, logo.scale),
-      margin = margin.toFloat()
-    )
-  }
+//  private fun getAttributionMeasure(
+//    context: Context,
+//    overlay: SnapshotOverlay,
+//    snapshotBitmap: Bitmap,
+//    margin: Int
+//  ): AttributionMeasure {
+//    val logo: Logo = createScaledLogo(context, snapshotBitmap)
+//    return AttributionMeasure(
+//      snapshot = snapshotBitmap,
+//      logo = logo.large,
+//      logoSmall = logo.small,
+//      textView = createTextView(context, overlay, false, logo.scale),
+//      textViewShort = createTextView(context, overlay, true, logo.scale),
+//      margin = margin.toFloat()
+//    )
+//  }
 
   private fun createTextView(
     context: Context,
@@ -450,50 +450,50 @@ open class Snapshotter {
     textView.layoutParams = ViewGroup.LayoutParams(
       ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT
     )
-    val attributionString = createAttributionString(overlay, shortText)
-    if (attributionString.isNotEmpty()) {
-      textView.isSingleLine = true
-      textView.textSize = 10 * scale
-      textView.setTextColor(textColor)
-      textView.setBackgroundResource(R.drawable.mapbox_rounded_corner)
-      @Suppress("DEPRECATION")
-      textView.text = Html.fromHtml(attributionString)
-      textView.measure(widthMeasureSpec, heightMeasureSpec)
-      textView.layout(0, 0, textView.measuredWidth, textView.measuredHeight)
-    }
+//    val attributionString = createAttributionString(overlay, shortText)
+//    if (attributionString.isNotEmpty()) {
+//      textView.isSingleLine = true
+//      textView.textSize = 10 * scale
+//      textView.setTextColor(textColor)
+//      textView.setBackgroundResource(R.drawable.mapbox_rounded_corner)
+//      @Suppress("DEPRECATION")
+//      textView.text = Html.fromHtml(attributionString)
+//      textView.measure(widthMeasureSpec, heightMeasureSpec)
+//      textView.layout(0, 0, textView.measuredWidth, textView.measuredHeight)
+//    }
     return textView
   }
 
-  private fun createAttributionString(
-    overlay: SnapshotOverlay,
-    shortText: Boolean
-  ): String {
-    context.get()?.apply {
-      val attributionParser: AttributionParser = AttributionParser.Options(this)
-        .withAttributionData(*overlay.attributions.toTypedArray())
-        .withCopyrightSign(false)
-        .withImproveMap(false)
-        .withMapboxPrivacyPolicy(false)
-        .withTelemetryAttribution(false)
-        .withMapboxGeofencingConsent(false)
-        .build()
-      return attributionParser.createAttributionString(shortText)
-    }
-    return ""
-  }
+//  private fun createAttributionString(
+//    overlay: SnapshotOverlay,
+//    shortText: Boolean
+//  ): String {
+//    context.get()?.apply {
+//      val attributionParser: AttributionParser = AttributionParser.Options(this)
+//        .withAttributionData(*overlay.attributions.toTypedArray())
+//        .withCopyrightSign(false)
+//        .withImproveMap(false)
+//        .withMapboxPrivacyPolicy(false)
+//        .withTelemetryAttribution(false)
+//        .withMapboxGeofencingConsent(false)
+//        .build()
+//      return attributionParser.createAttributionString(shortText)
+//    }
+//    return ""
+//  }
 
-  private fun drawLogo(
-    snapshot: Bitmap,
-    canvas: Canvas,
-    margin: Int,
-    placement: AttributionLayout
-  ) {
-    placement.logo?.let {
-      canvas.drawBitmap(
-        it, margin.toFloat(), (snapshot.height - it.height - margin).toFloat(), null
-      )
-    }
-  }
+//  private fun drawLogo(
+//    snapshot: Bitmap,
+//    canvas: Canvas,
+//    margin: Int,
+//    placement: AttributionLayout
+//  ) {
+//    placement.logo?.let {
+//      canvas.drawBitmap(
+//        it, margin.toFloat(), (snapshot.height - it.height - margin).toFloat(), null
+//      )
+//    }
+//  }
 
   private fun createScaledLogo(context: Context, snapshotBitmap: Bitmap): Logo {
     val logo = BitmapFactory.decodeResource(context.resources, R.drawable.mapbox_logo_icon, null)

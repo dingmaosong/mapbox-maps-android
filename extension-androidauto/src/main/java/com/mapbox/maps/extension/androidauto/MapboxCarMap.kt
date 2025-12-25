@@ -93,7 +93,7 @@ class MapboxCarMap {
     check(mapInitOptions.context is CarContext) {
       "You must set up the MapboxCarMap MapInitOptions with a CarContext"
     }
-    MapboxCarTelemetryEvents.map.increment()
+//    MapboxCarTelemetryEvents.map.increment()
     carMapSurfaceOwner.setup(carContext, mapInitOptions)
     return carMapSurfaceOwner
   }
