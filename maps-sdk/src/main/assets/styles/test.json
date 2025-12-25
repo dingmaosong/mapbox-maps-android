@@ -1,0 +1,48 @@
+{
+  "version": 8,
+  "name": "Offline",
+  "glyphs": "asset://glyphs/{fontstack}/{range}.pbf",
+  "sources": {
+    "test-text-source": {
+      "type": "geojson",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [113.4101, 23.1788]
+            },
+            "properties": {
+              "title": "XAG"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#ffffff"
+      }
+    },
+    {
+      "id": "test-text-layer",
+      "type": "symbol",
+      "source": "test-text-source",
+      "layout": {
+        "text-field": ["get", "title"],
+        "text-font": ["OpenSans-Regular"],
+        "text-size": 50,
+        "text-anchor": "center"
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ]
+}

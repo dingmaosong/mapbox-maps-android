@@ -1,8 +1,8 @@
 {
   "version": 8,
-  "name": "Empty",
-  "sources": {
-  },
+  "name": "Offline",
+  "glyphs": "asset://glyphs/{fontstack}/{range}.pbf",
+  "sources": {},
   "layers": [
     {
       "id": "background",
