@@ -86,7 +86,7 @@ sealed class Plugin(
     /**
      * Id for Mapbox Attribution Plugin.
      */
-    const val MAPBOX_ATTRIBUTION_PLUGIN_ID = "MAPBOX_ATTRIBUTION_PLUGIN_ID"
+//    const val MAPBOX_ATTRIBUTION_PLUGIN_ID = "MAPBOX_ATTRIBUTION_PLUGIN_ID"
     /**
      * Id for Mapbox Location Component Plugin.
      */

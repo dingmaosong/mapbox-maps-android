@@ -18,7 +18,7 @@ import java.util.regex.Pattern
 @RestrictTo(RestrictTo.Scope.LIBRARY)
 internal class MapAttributionDelegateImpl @OptIn(MapboxExperimental::class) constructor(
   private val mapboxMap: MapboxMap,
-  private val mapTelemetry: MapTelemetry,
+//  private val mapTelemetry: MapTelemetry,
   private val mapGeofencingConsent: MapGeofencingConsent,
 ) : MapAttributionDelegate {
 
@@ -27,9 +27,9 @@ internal class MapAttributionDelegateImpl @OptIn(MapboxExperimental::class) cons
    *
    * @return map telemetry instance
    */
-  override fun telemetry(): MapTelemetry {
-    return mapTelemetry
-  }
+//  override fun telemetry(): MapTelemetry {
+//    return mapTelemetry
+//  }
 
   /**
    * Called to request an instance of geofencing consent.

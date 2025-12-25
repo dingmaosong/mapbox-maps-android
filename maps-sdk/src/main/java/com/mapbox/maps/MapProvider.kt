@@ -54,9 +54,10 @@ internal object MapProvider {
   fun getMapPluginRegistry(
     mapboxMap: MapboxMap,
     mapController: MapController,
-    telemetry: MapTelemetry,
+//    telemetry: MapTelemetry,
     mapGeofencingConsent: MapGeofencingConsent,
-  ) = MapPluginRegistry(MapDelegateProviderImpl(mapboxMap, mapController, telemetry, mapGeofencingConsent))
+//  ) = MapPluginRegistry(MapDelegateProviderImpl(mapboxMap, mapController, telemetry, mapGeofencingConsent))
+  ) = MapPluginRegistry(MapDelegateProviderImpl(mapboxMap, mapController, mapGeofencingConsent))
 
   fun getMapTelemetryInstance(context: Context): MapTelemetry {
     if (!::mapTelemetry.isInitialized) {

@@ -23,14 +23,15 @@ import com.mapbox.maps.plugin.delegates.MapTransformDelegate
 internal class MapDelegateProviderImpl(
   val mapboxMap: MapboxMap,
   mapController: MapController,
-  telemetry: MapTelemetry,
+//  telemetry: MapTelemetry,
   mapGeofencingConsent: MapGeofencingConsent,
 ) : MapDelegateProvider {
   override val mapCameraManagerDelegate: MapCameraManagerDelegate = mapboxMap
   override val mapProjectionDelegate: MapProjectionDelegate = mapboxMap
   override val mapTransformDelegate: MapTransformDelegate = mapboxMap
   override val mapAttributionDelegate: MapAttributionDelegate by lazy {
-    MapAttributionDelegateImpl(mapboxMap, telemetry, mapGeofencingConsent)
+//    MapAttributionDelegateImpl(mapboxMap, telemetry, mapGeofencingConsent)
+    MapAttributionDelegateImpl(mapboxMap, mapGeofencingConsent)
   }
   override val mapFeatureQueryDelegate: MapFeatureQueryDelegate = mapboxMap
   override val mapPluginProviderDelegate: MapPluginProviderDelegate = mapController

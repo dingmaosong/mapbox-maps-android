@@ -23,7 +23,7 @@ import com.mapbox.maps.extension.style.sources.addSource
 import com.mapbox.maps.extension.style.sources.generated.GeoJsonSource
 import com.mapbox.maps.extension.style.sources.generated.geoJsonSource
 import com.mapbox.maps.extension.style.sources.getSource
-import com.mapbox.maps.plugin.attribution.attribution
+//import com.mapbox.maps.plugin.attribution.attribution
 import com.mapbox.maps.plugin.compass.compass
 import com.mapbox.maps.plugin.gestures.gestures
 import com.mapbox.maps.plugin.logo.logo
@@ -109,7 +109,7 @@ class InsetMapActivity : AppCompatActivity() {
       insetMapFragment.getMapView().apply {
         logo.enabled = false
         scalebar.enabled = false
-        attribution.enabled = false
+//        attribution.enabled = false
         compass.enabled = false
 
         gestures.updateSettings {
