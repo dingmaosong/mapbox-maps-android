@@ -1,5 +1,6 @@
 package com.mapbox.maps
 
+import android.util.Log
 import android.view.MotionEvent
 import androidx.annotation.RestrictTo
 import androidx.annotation.VisibleForTesting
@@ -85,7 +86,8 @@ internal class MapController : MapPluginProviderDelegate, MapControllable {
     mapInitOptions: MapInitOptions,
   ) {
     if (MapboxOptions.accessToken.isBlank()) {
-      throw MapboxConfigurationException()
+//      throw MapboxConfigurationException()
+      Log.e(TAG, "Mapbox access token is not set. Please set the token by Mapbox.getInstance(Context, String)")
     }
 
     this.renderer = renderer
