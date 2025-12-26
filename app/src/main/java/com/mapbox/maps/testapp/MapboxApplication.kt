@@ -8,7 +8,7 @@ import com.mapbox.common.geofencing.GeofencingError
 import com.mapbox.common.geofencing.GeofencingEvent
 import com.mapbox.common.geofencing.GeofencingFactory
 import com.mapbox.common.geofencing.GeofencingObserver
-import com.mapbox.maps.MapboxMapInitializer
+import com.mapbox.maps.MapboxOfflineMapInitializer
 import com.mapbox.maps.logD
 import com.mapbox.maps.logW
 import com.mapbox.maps.testapp.examples.geofence.ExtendedGeofencingActivity
@@ -63,7 +63,7 @@ class MapboxApplication : Application() {
 
   override fun onCreate() {
     super.onCreate()
-    MapboxMapInitializer.initialize()
+    MapboxOfflineMapInitializer.initialize()
 //    initializeStrictMode()
     if (ENABLE_BACKGROUND_GEOFENCING) {
       registerGeofencingObserver()

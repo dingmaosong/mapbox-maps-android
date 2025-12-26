@@ -4,9 +4,10 @@ import com.mapbox.common.TelemetryUtils
 import com.mapbox.common.MapboxOptions
 
 /**
- * Mapbox SDK 初始化器，用于设置全局配置
+ * Mapbox SDK 离线使用初始化器，用于设置全局配置
+ * 离线不访问mapbox服务器
  */
-object MapboxMapInitializer {
+object MapboxOfflineMapInitializer {
   @Volatile
   private var isInitialized = false
 
