@@ -96,33 +96,41 @@ class CustomTileSourceActivity : AppCompatActivity() {
     })
 
     // 使用本地离线样式而不是 Mapbox 的在线样式，完全避免访问境外服务器
-    mapboxMap.loadStyle(Style.OFFLINE) { style ->
-      // Remove default sources and layers to ensure we only use our custom source
-      // ------- 验证test.json 需要注释掉这段代码 并修改 Style.OFFLINE
-      style.removeStyleLayer("land")
-
-      style.addSource(
-        rasterSource(SOURCE_ID) {
-          tileSet(tileSet)
-          tileSize(RASTER_TILE_SIZE_PIXELS)
-        }
-      )
-      style.addLayer(rasterLayer(LAYER_ID, SOURCE_ID) {})
-
-      // Set camera position based on the provider after style is loaded
-      val (lat, lng) = when(provider) {
-        TileProvider.GAODE -> Pair(GUANGZHOU_LAT_GCJ02, GUANGZHOU_LNG_GCJ02)
-        TileProvider.TIANDITU -> Pair(GUANGZHOU_LAT_WGS84, GUANGZHOU_LNG_WGS84)
-      }
-
+    // ------- 验证test.json 需要注释掉这段代码 并修改 Style.OFFLINE
+//    mapboxMap.loadStyle(Style.OFFLINE) { style ->
+//      style.removeStyleLayer("land")
+//      style.addSource(
+//        rasterSource(SOURCE_ID) {
+//          tileSet(tileSet)
+//          tileSize(RASTER_TILE_SIZE_PIXELS)
+//        }
+//      )
+//      style.addLayer(rasterLayer(LAYER_ID, SOURCE_ID) {})
+//
+//      // Set camera position based on the provider after style is loaded
+//      val (lat, lng) = when(provider) {
+//        TileProvider.GAODE -> Pair(GUANGZHOU_LAT_GCJ02, GUANGZHOU_LNG_GCJ02)
+//        TileProvider.TIANDITU -> Pair(GUANGZHOU_LAT_WGS84, GUANGZHOU_LNG_WGS84)
+//      }
+//
+//      mapboxMap.setCamera(
+//        com.mapbox.maps.CameraOptions.Builder()
+//          .center(com.mapbox.geojson.Point.fromLngLat(lng, lat))
+//          .zoom(INITIAL_ZOOM)
+//          .build()
+//      )
+//    }
+    // ------- 验证test.json 需要注释掉这段代码
+    // ------- 验证test.json 需要放开这段代码
+    mapboxMap.loadStyle(Style.OFFLINE_TEST) { style ->
       mapboxMap.setCamera(
         com.mapbox.maps.CameraOptions.Builder()
-          .center(com.mapbox.geojson.Point.fromLngLat(lng, lat))
-          .zoom(INITIAL_ZOOM)
+          .center(com.mapbox.geojson.Point.fromLngLat(113.4101, 23.125))
+          .zoom(11.0)
           .build()
       )
-      // ------- 验证test.json 需要注释掉这段代码
     }
+    // ------- 验证test.json 需要放开这段代码
   }
 
   override fun onCreateOptionsMenu(menu: Menu): Boolean {

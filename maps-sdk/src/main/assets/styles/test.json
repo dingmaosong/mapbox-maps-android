@@ -1,27 +1,35 @@
 {
   "version": 8,
-  "name": "Offline",
+  "name": "Offline-Language-Verify",
   "glyphs": "asset://glyphs/{fontstack}/{range}.pbf",
+
   "sources": {
-    "test-text-source": {
+    "lang-source": {
       "type": "geojson",
       "data": {
         "type": "FeatureCollection",
         "features": [
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [113.4101, 23.1788]
-            },
-            "properties": {
-              "title": "XAG"
-            }
-          }
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.2000] }, "properties": { "title": "01 English: Hello World" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1900] }, "properties": { "title": "02 Chinese: 你好，世界！【中文标点】" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1800] }, "properties": { "title": "03 Japanese: こんにちは世界" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1700] }, "properties": { "title": "04 Korean: 안녕하세요 세계" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1600] }, "properties": { "title": "05 Vietnamese: Xin chào thế giới" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1500] }, "properties": { "title": "06 Thai: สวัสดีชาวโลก" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1400] }, "properties": { "title": "07 Portuguese: Olá Mundo" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1300] }, "properties": { "title": "08 Spanish: Hola Mundo" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1200] }, "properties": { "title": "09 Khmer: សួស្តី​ពិភពលោក" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1100] }, "properties": { "title": "10 Turkish: Merhaba Dünya" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1000] }, "properties": { "title": "11 Romanian: Salut Lume" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.0900] }, "properties": { "title": "12 Bulgarian: Здравей свят" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.0800] }, "properties": { "title": "13 Uyghur: ياخشىمۇسىز دۇنيا" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.0700] }, "properties": { "title": "14 Italian: Ciao Mondo" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.0600] }, "properties": { "title": "15 Russian: Привет мир" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.0500] }, "properties": { "title": "16 Indonesian: Halo Dunia" } }
         ]
       }
     }
   },
+
   "layers": [
     {
       "id": "background",
@@ -31,14 +39,19 @@
       }
     },
     {
-      "id": "test-text-layer",
+      "id": "lang-text-layer",
       "type": "symbol",
-      "source": "test-text-source",
+      "source": "lang-source",
       "layout": {
         "text-field": ["get", "title"],
-        "text-font": ["OpenSans-Regular"],
-        "text-size": 50,
-        "text-anchor": "center"
+        "text-font": ["Open Sans Regular"],
+        "text-size": 10,
+        "text-anchor": "center",
+        "text-justify": "center",
+        "text-max-width": 999,
+        "text-line-height": 1.2,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true
       },
       "paint": {
         "text-color": "#000000"
