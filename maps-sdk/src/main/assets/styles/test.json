@@ -10,7 +10,7 @@
         "type": "FeatureCollection",
         "features": [
           { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.2000] }, "properties": { "title": "01 English: Hello World" } },
-          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1900] }, "properties": { "title": "02 Chinese: 你好，世界！【中文标点】" } },
+          { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1900] }, "properties": { "title": "02 Chinese: 你好，世界！【中文标点，。/？‘’“”；：～！@#¥%……&*（）《》】" } },
           { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1800] }, "properties": { "title": "03 Japanese: こんにちは世界" } },
           { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1700] }, "properties": { "title": "04 Korean: 안녕하세요 세계" } },
           { "type": "Feature", "geometry": { "type": "Point", "coordinates": [113.4101, 23.1600] }, "properties": { "title": "05 Vietnamese: Xin chào thế giới" } },
