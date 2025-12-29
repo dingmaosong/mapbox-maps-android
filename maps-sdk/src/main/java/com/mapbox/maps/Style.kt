@@ -1562,6 +1562,7 @@ class Style internal constructor(
      * Particularly useful for data visualization or when adding custom layers.
      */
     const val OFFLINE = "asset://styles/offline.json"
+    const val OFFLINE_TEST = "asset://styles/test.json"
   }
 
   /**
