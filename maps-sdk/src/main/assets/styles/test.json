@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Offline-Language-Verify",
+  "name": "Offline-Language-Stable",
   "glyphs": "asset://glyphs/{fontstack}/{range}.pbf",
 
   "sources": {
@@ -38,13 +38,56 @@
         "background-color": "#ffffff"
       }
     },
+
     {
-      "id": "lang-text-layer",
+      "id": "text-cjk",
+      "type": "symbol",
+      "source": "lang-source",
+      "filter": ["in", ["get", "lang"], "zh", "ja", "ko"],
+      "layout": {
+        "text-field": ["get", "title"],
+        "text-font": ["Noto Sans CJK SC Regular"],
+        "text-size": 10,
+        "text-anchor": "center",
+        "text-justify": "center",
+        "text-max-width": 999,
+        "text-line-height": 1.2,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    },
+
+    {
+      "id": "text-arabic",
+      "type": "symbol",
+      "source": "lang-source",
+      "filter": ["in", ["get", "lang"], "ar", "ug"],
+      "layout": {
+        "text-field": ["get", "title"],
+        "text-font": ["Noto Naskh Arabic Regular"],
+        "text-size": 10,
+        "text-anchor": "center",
+        "text-justify": "center",
+        "text-max-width": 999,
+        "text-line-height": 1.2,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    },
+
+    {
+      "id": "text-default",
       "type": "symbol",
       "source": "lang-source",
       "layout": {
         "text-field": ["get", "title"],
-        "text-font": ["Open Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-size": 10,
         "text-anchor": "center",
         "text-justify": "center",
