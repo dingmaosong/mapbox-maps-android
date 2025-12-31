@@ -1,0 +1,9 @@
+{
+  "name": "fonts-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@mapbox/glyph-pbf-composite": "0.0.3"
+  }
+}
