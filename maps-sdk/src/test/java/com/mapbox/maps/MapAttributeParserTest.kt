@@ -29,7 +29,7 @@ class MapAttributeParserTest {
         R.styleable.mapbox_MapView_mapbox_mapGlyphRasterizationMode,
         any()
       )
-    } returns 1
+    } returns 2
   }
 
   @After
@@ -45,7 +45,7 @@ class MapAttributeParserTest {
     assertEquals(true, mapOptions.crossSourceCollisions)
     assertEquals("sans-serif", mapOptions.glyphsRasterizationOptions!!.fontFamily)
     assertEquals(
-      GlyphsRasterizationMode.IDEOGRAPHS_RASTERIZED_LOCALLY,
+      GlyphsRasterizationMode.ALL_GLYPHS_RASTERIZED_LOCALLY,
       mapOptions.glyphsRasterizationOptions!!.rasterizationMode,
     )
     assertEquals(NorthOrientation.UPWARDS, mapOptions.orientation)
