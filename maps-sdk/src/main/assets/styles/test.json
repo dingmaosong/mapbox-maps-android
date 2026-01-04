@@ -35,7 +35,8 @@
       "id": "background",
       "type": "background",
       "paint": {
-        "background-color": "#ffffff"
+        "background-color": "#000000",
+        "background-opacity": 0
       }
     },
 
@@ -46,7 +47,7 @@
       "layout": {
         "text-field": ["get", "title"],
         "text-font": ["sans-serif"],
-        "text-size": 10,
+        "text-size": 12,
         "text-anchor": "center",
         "text-justify": "center",
         "text-max-width": 999,
@@ -55,7 +56,10 @@
         "text-ignore-placement": true
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#ffffff",
+        "text-halo-color": "#000000",
+        "text-halo-width": 1.25,
+        "text-halo-blur": 0.3
       }
     }
   ]

@@ -12,6 +12,7 @@ import com.mapbox.maps.MapboxMap
 import com.mapbox.maps.Style
 import com.mapbox.maps.extension.observable.eventdata.MapLoadingErrorEventData
 import com.mapbox.maps.extension.style.layers.addLayer
+import com.mapbox.maps.extension.style.layers.addLayerBelow
 import com.mapbox.maps.extension.style.layers.generated.rasterLayer
 import com.mapbox.maps.extension.style.sources.TileSet
 import com.mapbox.maps.extension.style.sources.addSource
@@ -32,6 +33,7 @@ class CustomTileSourceActivity : AppCompatActivity() {
 
   private lateinit var mapboxMap: MapboxMap
   private var currentProvider = TileProvider.GAODE
+  private var currentStyleUri = Style.OFFLINE_TEST
 
   enum class TileProvider {
     GAODE,
@@ -43,7 +45,7 @@ class CustomTileSourceActivity : AppCompatActivity() {
     setContentView(R.layout.activity_custom_layer)
     val mapView: MapView = findViewById(R.id.mapView)
     
-    setupMapWithProvider(mapView, currentProvider)
+    setupMapWithProvider(mapView, currentProvider, currentStyleUri)
 
     // Click on button to print out tile set information
     findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
@@ -58,7 +60,7 @@ class CustomTileSourceActivity : AppCompatActivity() {
     }
   }
 
-  private fun setupMapWithProvider(mapView: MapView, provider: TileProvider) {
+  private fun setupMapWithProvider(mapView: MapView, provider: TileProvider, styleUri: String) {
     val tileSet = when(provider) {
       TileProvider.GAODE -> {
         TileSet.Builder(TILE_JSON_VERSION, listOf(GAODE_RASTER_TILE_URL))
@@ -87,7 +89,6 @@ class CustomTileSourceActivity : AppCompatActivity() {
     }
 
     mapboxMap = mapView.mapboxMap
-    // 添加地图加载错误监听器以帮助调试
     mapboxMap.addOnMapLoadErrorListener(object : OnMapLoadErrorListener {
       override fun onMapLoadError(eventData: MapLoadingErrorEventData) {
         logE(TAG, "Map loading error: ${eventData.message}")
@@ -95,42 +96,34 @@ class CustomTileSourceActivity : AppCompatActivity() {
       }
     })
 
-    // 使用本地离线样式而不是 Mapbox 的在线样式，完全避免访问境外服务器
-    // ------- 验证test.json 需要注释掉这段代码 并修改 Style.OFFLINE
-//    mapboxMap.loadStyle(Style.OFFLINE) { style ->
-//      style.removeStyleLayer("land")
-//      style.addSource(
-//        rasterSource(SOURCE_ID) {
-//          tileSet(tileSet)
-//          tileSize(RASTER_TILE_SIZE_PIXELS)
-//        }
-//      )
-//      style.addLayer(rasterLayer(LAYER_ID, SOURCE_ID) {})
-//
-//      // Set camera position based on the provider after style is loaded
-//      val (lat, lng) = when(provider) {
-//        TileProvider.GAODE -> Pair(GUANGZHOU_LAT_GCJ02, GUANGZHOU_LNG_GCJ02)
-//        TileProvider.TIANDITU -> Pair(GUANGZHOU_LAT_WGS84, GUANGZHOU_LNG_WGS84)
-//      }
-//
-//      mapboxMap.setCamera(
-//        com.mapbox.maps.CameraOptions.Builder()
-//          .center(com.mapbox.geojson.Point.fromLngLat(lng, lat))
-//          .zoom(INITIAL_ZOOM)
-//          .build()
-//      )
-//    }
-    // ------- 验证test.json 需要注释掉这段代码
-    // ------- 验证test.json 需要放开这段代码
-    mapboxMap.loadStyle(Style.OFFLINE_TEST) { style ->
+    mapboxMap.loadStyle(styleUri) { style ->
+      if (styleUri == Style.OFFLINE && style.styleLayerExists("land")) {
+        style.removeStyleLayer("land")
+      }
+      style.addSource(
+        rasterSource(SOURCE_ID) {
+          tileSet(tileSet)
+          tileSize(RASTER_TILE_SIZE_PIXELS)
+        }
+      )
+      val raster = rasterLayer(LAYER_ID, SOURCE_ID) {}
+      if (style.styleLayerExists(TEXT_LAYER_ID)) {
+        style.addLayerBelow(raster, TEXT_LAYER_ID)
+      } else {
+        style.addLayer(raster)
+      }
+
+      val (lat, lng) = when(provider) {
+        TileProvider.GAODE -> Pair(GUANGZHOU_LAT_GCJ02, GUANGZHOU_LNG_GCJ02)
+        TileProvider.TIANDITU -> Pair(GUANGZHOU_LAT_WGS84, GUANGZHOU_LNG_WGS84)
+      }
       mapboxMap.setCamera(
         com.mapbox.maps.CameraOptions.Builder()
-          .center(com.mapbox.geojson.Point.fromLngLat(113.4101, 23.125))
-          .zoom(11.0)
+          .center(com.mapbox.geojson.Point.fromLngLat(lng, lat))
+          .zoom(INITIAL_ZOOM)
           .build()
       )
     }
-    // ------- 验证test.json 需要放开这段代码
   }
 
   override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -143,13 +136,25 @@ class CustomTileSourceActivity : AppCompatActivity() {
       R.id.menu_switch_to_gaode -> {
         currentProvider = TileProvider.GAODE
         val mapView: MapView = findViewById(R.id.mapView)
-        setupMapWithProvider(mapView, currentProvider)
+        setupMapWithProvider(mapView, currentProvider, currentStyleUri)
         true
       }
       R.id.menu_switch_to_tianditu -> {
         currentProvider = TileProvider.TIANDITU
         val mapView: MapView = findViewById(R.id.mapView)
-        setupMapWithProvider(mapView, currentProvider)
+        setupMapWithProvider(mapView, currentProvider, currentStyleUri)
+        true
+      }
+      R.id.menu_style_offline_test -> {
+        currentStyleUri = Style.OFFLINE_TEST
+        val mapView: MapView = findViewById(R.id.mapView)
+        setupMapWithProvider(mapView, currentProvider, currentStyleUri)
+        true
+      }
+      R.id.menu_style_offline -> {
+        currentStyleUri = Style.OFFLINE
+        val mapView: MapView = findViewById(R.id.mapView)
+        setupMapWithProvider(mapView, currentProvider, currentStyleUri)
         true
       }
       else -> {
@@ -162,6 +167,7 @@ class CustomTileSourceActivity : AppCompatActivity() {
     const val SOURCE_ID = "custom"
     const val LAYER_ID = SOURCE_ID
     const val TAG = "CustomTileSource"
+    const val TEXT_LAYER_ID = "text-default"
 
     const val TILE_JSON_VERSION = "2.0.0"
     const val TILE_JSON_MIN_ZOOM = 0

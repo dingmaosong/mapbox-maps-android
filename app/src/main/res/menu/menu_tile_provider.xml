@@ -9,4 +9,12 @@
         android:id="@+id/menu_switch_to_tianditu"
         android:title="Switch to Tianditu"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_style_offline_test"
+        android:title="Use OFFLINE_TEST style"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_style_offline"
+        android:title="Use OFFLINE style"
+        app:showAsAction="never" />
 </menu>
