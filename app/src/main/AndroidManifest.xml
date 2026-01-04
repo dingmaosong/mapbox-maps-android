@@ -1344,6 +1344,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ExampleOverviewActivity" />
         </activity>
+        <activity
+            android:name=".examples.DsmTileSourceActivity"
+            android:description="@string/description_dsm_tile_source"
+            android:exported="true"
+            android:label="@string/activity_dsm_tile_source">
+            <meta-data
+                android:name="category"
+                android:value="@string/category_styles" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExampleOverviewActivity" />
+        </activity>
 
         <meta-data
             android:name="com.mapbox.maps.ThreadChecker"
