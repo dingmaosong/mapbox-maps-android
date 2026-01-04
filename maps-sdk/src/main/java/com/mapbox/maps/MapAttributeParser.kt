@@ -11,7 +11,7 @@ internal object MapAttributeParser {
 
   private const val CONSTRAIN_MODE_HEIGHT_ONLY = 1
   private const val NO_GLYPHS_RASTERIZED_LOCALLY = 0
-  private const val IDEOGRAPHS_RASTERIZED_LOCALLY = 1
+  private const val ALL_GLYPHS_RASTERIZED_LOCALLY = 2
 
   /**
    * Parse [AttributeSet] to [MapSettings].
@@ -26,7 +26,7 @@ internal object MapAttributeParser {
     val contextMode = attrs.getInt(R.styleable.mapbox_MapView_mapbox_mapContextMode, 0)
     val constrain = attrs.getInt(R.styleable.mapbox_MapView_mapbox_mapConstrainMode, CONSTRAIN_MODE_HEIGHT_ONLY)
     val orientation = attrs.getInt(R.styleable.mapbox_MapView_mapbox_mapOrientation, 0)
-    val glyphsMode = attrs.getInt(R.styleable.mapbox_MapView_mapbox_mapGlyphRasterizationMode, IDEOGRAPHS_RASTERIZED_LOCALLY)
+    val glyphsMode = attrs.getInt(R.styleable.mapbox_MapView_mapbox_mapGlyphRasterizationMode, ALL_GLYPHS_RASTERIZED_LOCALLY)
     var fontFamily: String? = null
     if (glyphsMode != NO_GLYPHS_RASTERIZED_LOCALLY) {
       fontFamily = FontUtils.extractValidFont(attrs.getString(R.styleable.mapbox_MapView_mapbox_mapFontFamily))

@@ -86,7 +86,7 @@ fun MapOptions.Builder.applyDefaultParams(context: Context): MapOptions.Builder 
 fun MapOptions.Builder.applyDefaultParams(pixelRatio: Float): MapOptions.Builder = also {
   glyphsRasterizationOptions(
     GlyphsRasterizationOptions.Builder()
-      .rasterizationMode(GlyphsRasterizationMode.IDEOGRAPHS_RASTERIZED_LOCALLY)
+      .rasterizationMode(GlyphsRasterizationMode.ALL_GLYPHS_RASTERIZED_LOCALLY)
       .fontFamily(FontUtils.extractValidFont(null))
       .build()
   )

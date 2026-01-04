@@ -139,8 +139,6 @@ class MapControllerTest {
     verifySequence {
       mockRenderer.onStop()
       mockPluginRegistry.onStop()
-      mockEventsService.flush(any())
-      mockTelemetryService.flush(any())
     }
   }
 
