@@ -195,5 +195,7 @@
 
     <string name="activity_custom_tile_source">Custom Tile Source</string>
     <string name="description_custom_tile_source">An example of using custom tile sources from Chinese providers like Gaode Maps and Tianditu</string>
+    <string name="activity_dsm_tile_source">DSM Tile Source</string>
+    <string name="description_dsm_tile_source">Tianditu satellite base map with local DSM webp tiles overlay</string>
 
 </resources>
