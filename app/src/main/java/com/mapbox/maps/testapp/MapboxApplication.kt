@@ -63,7 +63,7 @@ class MapboxApplication : Application() {
 
   override fun onCreate() {
     super.onCreate()
-    MapboxOfflineMapInitializer.initialize()
+//    MapboxOfflineMapInitializer.initialize()
 //    initializeStrictMode()
     if (ENABLE_BACKGROUND_GEOFENCING) {
       registerGeofencingObserver()
