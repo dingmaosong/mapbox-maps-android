@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.*
 import android.text.Html
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -51,7 +52,8 @@ open class Snapshotter {
     overlayOptions: SnapshotOverlayOptions = SnapshotOverlayOptions()
   ) {
     if (MapboxOptions.accessToken.isBlank()) {
-      throw MapboxConfigurationException()
+//      throw MapboxConfigurationException()
+      Log.e("Snapshotter", "Mapbox access token is not set. Please set the token by Mapbox.getInstance(Context, String)")
     }
 
     this.context = WeakReference(context)
