@@ -140,16 +140,16 @@ afterEvaluate {
     publications {
       create<MavenPublication>("maven") {
         from(components["release"])
-        
+
         groupId = "com.mapbox.maps"
         artifactId = "android-xag"
-        version = "11.17.1-SNAPSHOT5"
-        
+        version = "11.16.1-SNAPSHOT1"
+
         pom {
           name.set("Mapbox Maps SDK for Android")
           description.set("Mapbox Maps SDK for Android")
           url.set("https://github.com/mapbox/mapbox-maps-android")
-          
+
           licenses {
             license {
               name.set("Mapbox Terms of Service")
@@ -157,14 +157,14 @@ afterEvaluate {
               distribution.set("repo")
             }
           }
-          
+
           developers {
             developer {
               id.set("mapbox")
               name.set("Mapbox")
             }
           }
-          
+
           scm {
             connection.set("scm:git@github.com:mapbox/mapbox-maps-android.git")
             developerConnection.set("scm:git@github.com:mapbox/mapbox-maps-android.git")
@@ -173,7 +173,7 @@ afterEvaluate {
         }
       }
     }
-    
+
     repositories {
       maven {
         name = "CNBMavenRepository"
@@ -192,7 +192,7 @@ afterEvaluate {
 tasks.register("publishToMavenLocalCustom") {
   group = "publishing"
   description = "Publishes the Android AAR and sources to Maven local with custom coordinates"
-  
+
   doLast {
     println("This is a placeholder task for custom publishing")
     println("To publish, use: ./gradlew :maps-sdk:publishReleasePublicationToMavenLocal")

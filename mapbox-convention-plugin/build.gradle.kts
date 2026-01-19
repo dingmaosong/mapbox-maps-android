@@ -5,7 +5,7 @@ repositories {
     url = uri("https://api.mapbox.com/downloads/v2/releases/maven")
     credentials {
       username = "mapbox"
-      password = System.getenv("SDK_REGISTRY_TOKEN") ?: project.property("SDK_REGISTRY_TOKEN") as String
+      password = "sk.eyJ1Ijoic25vd2xlMHBhcmQiLCJhIjoiY2tnZ2ptaTJnMDczcjJxc2N0YjN4N2hubiJ9.Ee8NZ8wMZpBeY9B0e_7_gw"
     }
     authentication {
       create<BasicAuthentication>("basic")
