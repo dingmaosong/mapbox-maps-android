@@ -23,7 +23,7 @@ object MapboxOfflineMapInitializer {
 //    MapboxMapsOptions.baseUrl = "http://0.0.0.0"
     MapboxMapsOptions.baseUrl = "http://127.0.0.1"
     MapboxMapsOptions.assetPath = "asset://"
-    MapboxMapsOptions.tileStoreUsageMode = TileStoreUsageMode.DISABLED
+//    MapboxMapsOptions.tileStoreUsageMode = TileStoreUsageMode.DISABLED
     // Attempt to set global MapboxOptions if available
     MapboxOptions.accessToken = ""
     TelemetryUtils.setEventsCollectionState(false) {}
