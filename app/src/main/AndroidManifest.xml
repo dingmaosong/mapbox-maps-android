@@ -1356,6 +1356,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ExampleOverviewActivity" />
         </activity>
+        <activity
+            android:name=".examples.octomap.OctoMapActivity"
+            android:description="@string/description_octomap"
+            android:exported="true"
+            android:label="@string/activity_octomap">
+            <meta-data
+                android:name="category"
+                android:value="@string/category_3D" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExampleOverviewActivity" />
+        </activity>
 
         <meta-data
             android:name="com.mapbox.maps.ThreadChecker"
