@@ -85,6 +85,10 @@ android {
   }
 }
 
+val ndkMajor: String by project
+val snapshotVersion = "11.16.1-SNAPSHOT14"
+val ndkSuffix = "-ndk$ndkMajor"
+
 dependencies {
   api(libs.mapbox.base)
 
@@ -106,6 +110,18 @@ dependencies {
   api(project(":plugin-scalebar"))//作用：比例尺 UI                         移除
 //  api(project(":plugin-attribution"))//作用：Mapbox 版权角标               移除
 //  implementation(project(":module-telemetry")) 日志上报                     必须移除
+  constraints {
+    api("com.mapbox.maps:base$ndkSuffix:$snapshotVersion") {
+      version {
+        strictly(snapshotVersion)
+      }
+    }
+    api("com.mapbox.plugin:maps-gestures$ndkSuffix:$snapshotVersion") {
+      version {
+        strictly(snapshotVersion)
+      }
+    }
+  }
   compileOnly(libs.asyncInflater)
   api(libs.kotlin)
   api(libs.coroutines)
@@ -143,8 +159,7 @@ afterEvaluate {
 
         groupId = "com.mapbox.maps"
         artifactId = "android-xag"
-        version = "11.16.1-SNAPSHOT2"
-
+        version = "11.16.1-SNAPSHOT14"
         pom {
           name.set("Mapbox Maps SDK for Android")
           description.set("Mapbox Maps SDK for Android")

@@ -104,8 +104,11 @@ mapboxLibrary {
     artifactTitle = "Mapbox Maps SDK Base"
     artifactDescription = artifactTitle
     sdkName = "mobile-maps-android-base"
+    versionNameOverride = "11.16.1-SNAPSHOT14"
   }
 }
+
+version = "11.16.1-SNAPSHOT14"
 
 dependencies {
   implementation(libs.kotlin)
@@ -125,4 +128,19 @@ project.apply {
   from("$rootDir/gradle/lint.gradle")
   from("$rootDir/gradle/track-public-apis.gradle")
   from("$rootDir/gradle/dependency-updates.gradle")
+}
+
+afterEvaluate {
+  extensions.configure<PublishingExtension>("publishing") {
+    repositories {
+      maven {
+        name = "CNBMavenRepository"
+        url = uri(project.findProperty("cnbArtifactsHciMavenRepoUrl") ?: "")
+        credentials {
+          username = project.findProperty("cnbArtifactsGradleName")?.toString() ?: ""
+          password = project.findProperty("cnbArtifactsGradlePassword")?.toString() ?: ""
+        }
+      }
+    }
+  }
 }

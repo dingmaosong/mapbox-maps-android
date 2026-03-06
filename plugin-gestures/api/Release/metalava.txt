@@ -26,8 +26,8 @@ package com.mapbox.maps.plugin.gestures {
     method public static void removeOnRotateListener(com.mapbox.maps.plugin.delegates.MapPluginExtensionsDelegate, com.mapbox.maps.plugin.gestures.OnRotateListener listener);
     method public static void removeOnScaleListener(com.mapbox.maps.plugin.delegates.MapPluginExtensionsDelegate, com.mapbox.maps.plugin.gestures.OnScaleListener listener);
     method public static void removeOnShoveListener(com.mapbox.maps.plugin.delegates.MapPluginExtensionsDelegate, com.mapbox.maps.plugin.gestures.OnShoveListener listener);
+    method public static void removeAllListeners(com.mapbox.maps.plugin.delegates.MapPluginExtensionsDelegate);
     method public static void setGesturesManager(com.mapbox.maps.plugin.delegates.MapPluginExtensionsDelegate, com.mapbox.android.gestures.AndroidGesturesManager androidGesturesManager, boolean attachDefaultListeners, boolean setDefaultMutuallyExclusives);
   }
 
 }
-

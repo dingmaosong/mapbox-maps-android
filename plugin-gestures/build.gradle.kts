@@ -28,8 +28,11 @@ mapboxLibrary {
     artifactTitle = "The gestures module for the Mapbox Maps SDK for Android"
     artifactDescription = artifactTitle
     sdkName = "mobile-maps-android-gestures"
+    versionNameOverride = "11.16.1-SNAPSHOT14"
   }
 }
+
+version = "11.16.1-SNAPSHOT14"
 
 dependencies {
   api(libs.mapbox.gestures)
@@ -46,4 +49,19 @@ project.apply {
   from("$rootDir/gradle/lint.gradle")
   from("$rootDir/gradle/track-public-apis.gradle")
   from("$rootDir/gradle/dependency-updates.gradle")
+}
+
+afterEvaluate {
+  extensions.configure<PublishingExtension>("publishing") {
+    repositories {
+      maven {
+        name = "CNBMavenRepository"
+        url = uri(project.findProperty("cnbArtifactsHciMavenRepoUrl") ?: "")
+        credentials {
+          username = project.findProperty("cnbArtifactsGradleName")?.toString() ?: ""
+          password = project.findProperty("cnbArtifactsGradlePassword")?.toString() ?: ""
+        }
+      }
+    }
+  }
 }

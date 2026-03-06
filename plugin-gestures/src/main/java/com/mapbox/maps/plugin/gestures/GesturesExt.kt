@@ -145,6 +145,10 @@ fun MapPluginExtensionsDelegate.removeOnShoveListener(listener: OnShoveListener)
   gesturesPlugin { removeOnShoveListener(listener) }
 }
 
+fun MapPluginExtensionsDelegate.removeAllListeners() {
+  gesturesPlugin { removeAllListeners() }
+}
+
 /**
  * Get the current configured AndroidGesturesManager.
  * Gesture plugin with id = [Plugin.MAPBOX_GESTURES_PLUGIN_ID] must be added while constructing

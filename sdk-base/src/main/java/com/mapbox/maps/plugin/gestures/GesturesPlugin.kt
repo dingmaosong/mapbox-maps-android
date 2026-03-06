@@ -167,4 +167,9 @@ interface GesturesPlugin : MapPlugin, ContextBinder, MapSizePlugin, GesturesSett
    * When specified, you are responsible for listening to gesture interactions and canceling the specified owners' animations to avoid competing with gestures.
    */
   fun removeProtectedAnimationOwner(owner: String)
+
+  /**
+   * Remove all listeners
+   */
+  fun removeAllListeners()
 }

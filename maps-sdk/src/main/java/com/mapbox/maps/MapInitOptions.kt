@@ -54,18 +54,18 @@ data class MapInitOptions @JvmOverloads constructor(
      *
      * If creating [MapView] from xml - all plugins listed here will be applied to given [MapView] on startup.
      */
-    val defaultPluginList: List<Plugin> = listOf(
-      Plugin.Mapbox(Plugin.MAPBOX_CAMERA_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_GESTURES_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_COMPASS_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_LOGO_PLUGIN_ID),
-//      Plugin.Mapbox(Plugin.MAPBOX_ATTRIBUTION_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_LOCATION_COMPONENT_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_SCALEBAR_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_ANNOTATION_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_LIFECYCLE_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_MAP_OVERLAY_PLUGIN_ID),
-      Plugin.Mapbox(Plugin.MAPBOX_VIEWPORT_PLUGIN_ID),
+    val defaultPluginList = mutableListOf(
+      Plugin.Mapbox(Plugin.MAPBOX_CAMERA_PLUGIN_ID),              // 相机插件
+      Plugin.Mapbox(Plugin.MAPBOX_GESTURES_PLUGIN_ID),            // 手势插件
+      Plugin.Mapbox(Plugin.MAPBOX_LOCATION_COMPONENT_PLUGIN_ID),  // 定位组件
+      Plugin.Mapbox(Plugin.MAPBOX_ANNOTATION_PLUGIN_ID),         // 注记插件
+      Plugin.Mapbox(Plugin.MAPBOX_LIFECYCLE_PLUGIN_ID),          // 生命周期插件
+      Plugin.Mapbox(Plugin.MAPBOX_MAP_OVERLAY_PLUGIN_ID),        // 覆盖物插件
+      Plugin.Mapbox(Plugin.MAPBOX_VIEWPORT_PLUGIN_ID),           // 视口插件
+//      Plugin.Mapbox(Plugin.MAPBOX_LOGO_PLUGIN_ID),              // Logo插件
+//      Plugin.Mapbox(Plugin.MAPBOX_SCALEBAR_PLUGIN_ID),          // 比例尺插件
+//      Plugin.Mapbox(Plugin.MAPBOX_COMPASS_PLUGIN_ID),           // 指南针插件
+//      Plugin.Mapbox(Plugin.MAPBOX_ATTRIBUTION_PLUGIN_ID),       // 版权插件
     )
   }
 }

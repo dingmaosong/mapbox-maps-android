@@ -18,6 +18,6 @@ public final class com/mapbox/maps/plugin/gestures/GesturesUtils {
 	public static final fun removeOnRotateListener (Lcom/mapbox/maps/plugin/delegates/MapPluginExtensionsDelegate;Lcom/mapbox/maps/plugin/gestures/OnRotateListener;)V
 	public static final fun removeOnScaleListener (Lcom/mapbox/maps/plugin/delegates/MapPluginExtensionsDelegate;Lcom/mapbox/maps/plugin/gestures/OnScaleListener;)V
 	public static final fun removeOnShoveListener (Lcom/mapbox/maps/plugin/delegates/MapPluginExtensionsDelegate;Lcom/mapbox/maps/plugin/gestures/OnShoveListener;)V
+	public static final fun removeAllListeners (Lcom/mapbox/maps/plugin/delegates/MapPluginExtensionsDelegate;)V
 	public static final fun setGesturesManager (Lcom/mapbox/maps/plugin/delegates/MapPluginExtensionsDelegate;Lcom/mapbox/android/gestures/AndroidGesturesManager;ZZ)V
 }
-

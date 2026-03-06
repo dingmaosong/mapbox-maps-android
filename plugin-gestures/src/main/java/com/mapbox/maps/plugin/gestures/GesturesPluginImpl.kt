@@ -1731,6 +1731,19 @@ internal class GesturesPluginImpl : GesturesPlugin, GesturesSettingsBase, MapSty
   }
 
   /**
+   * Remove all callbacks that are invoked when the map is clicked, long clicked, fling, moved, rotated, scaled, or shove.
+   */
+  override fun removeAllListeners() {
+    onMapClickListeners.clear()
+    onMapLongClickListeners.clear()
+    onFlingListeners.clear()
+    onMoveListeners.clear()
+    onRotateListeners.clear()
+    onScaleListeners.clear()
+    onShoveListeners.clear()
+  }
+
+  /**
    * Get the current configured AndroidGesturesManager.
    */
   override fun getGesturesManager(): AndroidGesturesManager {
