@@ -159,7 +159,7 @@ afterEvaluate {
 
         groupId = "com.mapbox.maps"
         artifactId = "android-xag"
-        version = "11.16.1-SNAPSHOT14"
+        version = "11.16.1-SNAPSHOT15"
         pom {
           name.set("Mapbox Maps SDK for Android")
           description.set("Mapbox Maps SDK for Android")
